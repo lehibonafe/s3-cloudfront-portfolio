@@ -1070,7 +1070,6 @@ body.light-theme .certification-item a:hover {
 .recommendations-grid {
     display: grid;
     gap: 20px;
-    margin-top: 16px;
 }
 
 .recommendation-card {
