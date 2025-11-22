@@ -633,6 +633,8 @@ body.light-theme .theme-toggle:active .toggle-thumb {
 }
 .project-title a {
     color: white;
+    text-decoration: underline;
+    text-underline-offset: 3px;
     transition: all 0.3s ease;
 }
 .project-title a:hover {
@@ -714,25 +716,7 @@ body.light-theme .theme-toggle:active .toggle-thumb {
     color: white;
 }
 
-.project-arrow-link {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 20px;
-    height: 20px;
-    text-decoration: none;
-    color: #d0d0d0;
-    border-radius: 4px;
-    transition: all 0.3s ease;
-    margin-left: 6px;
-    vertical-align: middle;
-}
 
-.project-arrow-link:hover {
-    color: white;
-    background: rgba(255, 255, 255, 0.1);
-    transform: translateY(-1px);
-}
 
 /* Light theme project styles */
 body.light-theme .project-title {
@@ -740,6 +724,8 @@ body.light-theme .project-title {
 }
 body.light-theme .project-title a {
     color: black;
+    text-decoration: underline;
+    text-underline-offset: 3px;
 }
 body.light-theme .project-type {
     color: #666;
@@ -768,14 +754,7 @@ body.light-theme .project-link:hover {
     color: #333;
 }
 
-body.light-theme .project-arrow-link {
-    color: #666;
-}
 
-body.light-theme .project-arrow-link:hover {
-    color: #333;
-    background: rgba(0, 0, 0, 0.05);
-}
 
 /* Light theme recommendations */
 body.light-theme .recommendation-card {
