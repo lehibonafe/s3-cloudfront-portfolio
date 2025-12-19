@@ -13,7 +13,9 @@ body {
     color: white;
     line-height: 1.6;
     min-height: 100vh;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
 }
 
 /* Light theme styles */
@@ -90,7 +92,6 @@ body.light-theme .experience-title {
 
 body.light-theme .project-title {
     color: black;
-    
 }
 
 body.light-theme .project-title a:hover {
@@ -156,8 +157,6 @@ body.light-theme .certification-item span {
     color: black !important;
 }
 
-
-
 /* Enhanced Theme Toggle Button */
 .theme-toggle {
     background: none;
@@ -204,14 +203,18 @@ body.light-theme .toggle-track {
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25), 0 2px 4px rgba(0, 0, 0, 0.15);
+    box-shadow:
+        0 4px 8px rgba(0, 0, 0, 0.25),
+        0 2px 4px rgba(0, 0, 0, 0.15);
     border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 body.light-theme .toggle-thumb {
     transform: translateX(32px);
     background: linear-gradient(135deg, #1a1a1a, #333333);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 2px 4px rgba(0, 0, 0, 0.15);
+    box-shadow:
+        0 4px 8px rgba(0, 0, 0, 0.2),
+        0 2px 4px rgba(0, 0, 0, 0.15);
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -278,7 +281,7 @@ body.light-theme .theme-toggle:active .toggle-thumb {
 }
 
 .card p {
-    font-size: .9rem;
+    font-size: 0.9rem;
 }
 
 .profile-header {
@@ -318,7 +321,7 @@ body.light-theme .theme-toggle:active .toggle-thumb {
 }
 
 .profile-image::before {
-    content: '';
+    content: "";
     position: absolute;
     inset: 2px;
     border-radius: 14px;
@@ -378,7 +381,6 @@ body.light-theme .theme-toggle:active .toggle-thumb {
     line-height: 1;
 }
 
-
 .title-separator {
     color: rgba(255, 255, 255, 0.5);
     font-weight: bold;
@@ -426,13 +428,18 @@ body.light-theme .theme-toggle:active .toggle-thumb {
 }
 
 .btn-certified::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.3),
+        transparent
+    );
     transition: left 0.6s;
 }
 
@@ -470,7 +477,6 @@ body.light-theme .theme-toggle:active .toggle-thumb {
 
 /* Responsive layout */
 @media (max-width: 768px) {
-
     /* Make secondary buttons share the row equally */
     .action-buttons .btn-secondary {
         flex: 1 1 calc(50% - 7px);
@@ -493,7 +499,6 @@ body.light-theme .theme-toggle:active .toggle-thumb {
         justify-content: center;
     }
 }
-
 
 .btn:hover {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
@@ -534,7 +539,7 @@ body.light-theme .theme-toggle:active .toggle-thumb {
 .tech-tags-title {
     font-weight: 600;
     color: #f1f5f9;
-    font-size: .9rem;
+    font-size: 0.9rem;
     margin-bottom: 8px;
 }
 .tag {
@@ -574,7 +579,7 @@ body.light-theme .theme-toggle:active .toggle-thumb {
 .experience-title {
     font-weight: 600;
     color: #f1f5f9;
-    font-size: .9rem;
+    font-size: 0.9rem;
 }
 
 .experience-company {
@@ -627,7 +632,7 @@ body.light-theme .theme-toggle:active .toggle-thumb {
     font-weight: 600;
     color: #f0f0f0;
     margin: 0;
-    font-size: .9rem;
+    font-size: 0.9rem;
     line-height: 1.3;
     flex: 1;
 }
@@ -642,7 +647,6 @@ body.light-theme .theme-toggle:active .toggle-thumb {
     text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
 }
 
-
 .project-meta {
     display: flex;
     gap: 12px;
@@ -656,8 +660,8 @@ body.light-theme .theme-toggle:active .toggle-thumb {
 }
 
 .project-description {
-    color: #d0d0d0;
-    font-size: 0.9rem;
+    color: #d0d0d0 !important;
+    font-size: 1rem;
     line-height: 1.5;
     margin-bottom: 18px;
 }
@@ -686,8 +690,6 @@ body.light-theme .theme-toggle:active .toggle-thumb {
     box-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
 }
 
-
-
 .project-footer {
     padding: 0 20px 0 0;
 }
@@ -715,8 +717,6 @@ body.light-theme .theme-toggle:active .toggle-thumb {
 .project-link:hover {
     color: white;
 }
-
-
 
 /* Light theme project styles */
 body.light-theme .project-title {
@@ -754,8 +754,6 @@ body.light-theme .project-link:hover {
     color: #333;
 }
 
-
-
 /* Light theme recommendations */
 body.light-theme .recommendation-card {
     background: rgba(255, 255, 255, 0.6);
@@ -777,8 +775,6 @@ body.light-theme .recommendation-author {
 body.light-theme .recommendation-role {
     color: #666;
 }
-
-
 
 body.light-theme .recommendation-text {
     color: #333;
@@ -821,10 +817,6 @@ body.light-theme .connect-arrow {
 body.light-theme .connect-card:hover .connect-arrow {
     color: black;
 }
-
-
-
-
 
 /* Mobile responsiveness for projects */
 @media (max-width: 768px) {
@@ -897,7 +889,7 @@ body.light-theme .connect-card:hover .connect-arrow {
     justify-content: space-between;
     align-items: center;
     padding: 12px 0;
-    font-size: .9rem;
+    font-size: 0.9rem;
     transition: all 0.3s ease;
 }
 
@@ -1086,12 +1078,6 @@ body.light-theme .certification-item a:hover {
     margin-bottom: 12px;
 }
 
-.recommendation-avatar {
-    font-size: 2.5rem;
-    color: white;
-    flex-shrink: 0;
-}
-
 .recommendation-info {
     flex: 1;
 }
@@ -1119,8 +1105,6 @@ body.light-theme .certification-item a:hover {
     margin-bottom: 4px;
 }
 
-
-
 .recommendation-text {
     font-style: italic;
     color: #e0e0e0;
@@ -1139,8 +1123,6 @@ body.light-theme .certification-item a:hover {
     left: -10px;
     font-family: serif;
 }
-
-
 
 @media (max-width: 768px) {
     .container {
