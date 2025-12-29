@@ -5,9 +5,9 @@
 }
 
 body {
-    font-family: "Rubik", sans-serif;
+    font-family: "Outfit", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 100;
+    font-weight: 300;
     font-style: normal;
     background: black;
     color: white;
@@ -273,7 +273,6 @@ body.light-theme .theme-toggle:active .toggle-thumb {
     backdrop-filter: blur(10px);
     border: 1px solid #333;
     background-color: rgba(25, 25, 25, 0.6);
-    border-radius: 12px;
     padding: 15px;
     transition: all 0.3s ease;
     position: relative;
@@ -297,8 +296,6 @@ body.light-theme .theme-toggle:active .toggle-thumb {
 .profile-image {
     width: 150px;
     height: 150px;
-    border-radius: 16px;
-    background: linear-gradient(135deg, #ff6b35, #f7931e);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -316,7 +313,6 @@ body.light-theme .theme-toggle:active .toggle-thumb {
     /* Preserve aspect ratio */
     display: block;
     /* Removes inline gaps */
-    border-radius: 8px;
     /* Optional rounded corners */
 }
 
@@ -324,17 +320,8 @@ body.light-theme .theme-toggle:active .toggle-thumb {
     content: "";
     position: absolute;
     inset: 2px;
-    border-radius: 14px;
     background: rgba(35, 35, 35, 0.9);
     z-index: -1;
-}
-
-.profile-info h1 {
-    font-size: 1.6rem;
-    font-weight: 700;
-    background: white;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
 }
 
 /* Default: Left-aligned for large screens and up */
@@ -400,7 +387,6 @@ body.light-theme .theme-toggle:active .toggle-thumb {
 .btn {
     padding: 6px 13px;
     border: none;
-    border-radius: 9px;
     cursor: pointer;
     transition: all 0.2s;
     text-decoration: none;
@@ -546,7 +532,6 @@ body.light-theme .theme-toggle:active .toggle-thumb {
     font-weight: 400;
     color: white;
     padding: 3px 8px;
-    border-radius: 10px;
     font-size: 0.7rem;
     border: white 1px solid;
     transition: all 0.3s ease;
@@ -562,7 +547,6 @@ body.light-theme .theme-toggle:active .toggle-thumb {
 .experience-item {
     margin-bottom: 24px;
     padding: 10px 3px;
-    border-radius: 8px;
 }
 
 .experience-item:last-child {
@@ -605,7 +589,7 @@ body.light-theme .theme-toggle:active .toggle-thumb {
     background: transparent;
     border: none;
     padding: 0;
-    margin-bottom: 24px;
+    margin-bottom: 1px;
 }
 
 .project-card:last-child {
@@ -660,7 +644,7 @@ body.light-theme .theme-toggle:active .toggle-thumb {
 }
 
 .project-description {
-    color: #d0d0d0 !important;
+    color: #d0d0d0;
     font-size: 1rem;
     line-height: 1.5;
     margin-bottom: 18px;
@@ -888,7 +872,7 @@ body.light-theme .connect-card:hover .connect-arrow {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 12px 0;
+    padding: 10px 0;
     font-size: 0.9rem;
     transition: all 0.3s ease;
 }
@@ -900,7 +884,7 @@ body.light-theme .connect-card:hover .connect-arrow {
 
 .certification-item:hover {
     color: white;
-    text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0);
 }
 
 .certification-item a:hover {
@@ -922,45 +906,6 @@ body.light-theme .certification-item a:hover {
     border-bottom: none;
 }
 
-.blog-post {
-    margin-bottom: 20px;
-    padding: 16px;
-    background: rgba(15, 23, 42, 0.4);
-    border-radius: 8px;
-    transition: all 0.2s;
-}
-
-.blog-post:hover {
-    background: rgba(15, 23, 42, 0.6);
-}
-
-.blog-title {
-    font-weight: 600;
-    color: #f1f5f9;
-    margin-bottom: 8px;
-    cursor: pointer;
-}
-
-.blog-meta {
-    color: #94a3b8;
-    font-size: 0.85rem;
-    margin-bottom: 8px;
-}
-
-.blog-tags {
-    display: flex;
-    gap: 6px;
-    flex-wrap: wrap;
-}
-
-.blog-tag {
-    background: rgba(56, 189, 248, 0.1);
-    color: #38bdf8;
-    padding: 3px 8px;
-    border-radius: 12px;
-    font-size: 0.75rem;
-}
-
 /* Enhanced Connect Section */
 .connect-grid {
     display: grid;
@@ -973,8 +918,7 @@ body.light-theme .certification-item a:hover {
     display: flex;
     align-items: center;
     gap: 12px;
-    padding: 12px;
-    border-radius: 8px;
+    padding: 10px 0;
     text-decoration: none;
     transition: all 0.3s ease;
     position: relative;
@@ -1056,11 +1000,10 @@ body.light-theme .certification-item a:hover {
 /* Enhanced Recommendations */
 .recommendations-grid {
     display: grid;
-    gap: 20px;
+    gap: 15px;
 }
 
 .recommendation-card {
-    border-radius: 12px;
     padding: 16px;
     transition: all 0.3s ease;
     position: relative;
@@ -1086,7 +1029,7 @@ body.light-theme .certification-item a:hover {
     font-weight: 600;
     color: white;
     font-size: 1rem;
-    margin-bottom: 2px;
+    margin-bottom: 1px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -1102,7 +1045,6 @@ body.light-theme .certification-item a:hover {
 .recommendation-role {
     font-size: 0.85rem;
     color: #b0b0b0;
-    margin-bottom: 4px;
 }
 
 .recommendation-text {
@@ -1112,16 +1054,6 @@ body.light-theme .certification-item a:hover {
     margin-bottom: 0;
     font-size: 0.9rem;
     position: relative;
-}
-
-.recommendation-text::before {
-    content: '"';
-    font-size: 3rem;
-    color: rgba(255, 255, 255, 0.1);
-    position: absolute;
-    top: -10px;
-    left: -10px;
-    font-family: serif;
 }
 
 @media (max-width: 768px) {
@@ -1162,8 +1094,7 @@ body.light-theme .certification-item a:hover {
     box-shadow: 0 0 10px rgba(16, 185, 129, 0.5);
 }
 
-/* Foot
-er Styles */
+/* Footer Styles */
 .footer {
     text-align: center;
     padding: clamp(30px, 5vw, 50px) 20px;
@@ -1222,8 +1153,7 @@ body.light-theme .footer-content p {
     }
 }
 
-/* Lig
-ht theme certified button */
+/* Light theme certified button */
 body.light-theme .btn-certified {
     background: linear-gradient(135deg, #ffd700, #ffb347);
     color: #1a1a1a;
