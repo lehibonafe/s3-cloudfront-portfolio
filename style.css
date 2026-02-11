@@ -55,6 +55,10 @@ body.light-theme .tag {
     border: 1px solid #333;
 }
 
+body.light-theme .about p{
+    color: black !important  ;
+}
+
 body.light-theme .tag:hover {
     color: #333;
     border-color: #333;
