@@ -53,20 +53,17 @@ body.light-theme .experience-description {
     color: #505050;
 }
 
-body.light-theme .card,
 body.light-theme .experience-card {
-    background-color: #e0e0e0;
-    border: 1px solid #d0d0d0;
+    background-color: #d8d8d8;
 }
 
-body.light-theme .card:hover,
-body.light-theme .experience-card:hover {
-    background-color: #d8d8d8;
-    border-color: #c0c0c0;
+body.light-theme .certs-grid .card {
+    background-color: transparent;
 }
+
 
 body.light-theme .card p {
-    color: #606060;
+    color: #505050;
 }
 
 body.light-theme .experience-company,
@@ -332,7 +329,6 @@ body.light-theme .cta-button {
 
 .card {
     background-color: #0a0a0a;
-    border: 1px solid #1a1a1a;
     border-radius: 16px;
     padding: 2rem;
     transition: all 0.3s ease;
@@ -350,16 +346,6 @@ body.light-theme .cta-button {
     background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
     transform: scaleX(0);
     transition: transform 0.3s ease;
-}
-
-.card:hover::before {
-    transform: scaleX(1);
-}
-
-.card:hover {
-    background-color: #0f0f0f;
-    border-color: #2a2a2a;
-    transform: translateY(-4px);
 }
 
 .card-icon {
@@ -613,6 +599,12 @@ body.light-theme .pdf-viewer-container {
     gap: 2rem;
 }
 
+.certs-grid .card-icon img {
+    width: 180px;
+    height: 180px;
+    object-fit: contain;
+}
+
 .certs-grid .card-icon {
     font-size: 3rem;
     margin-bottom: 0;
@@ -628,3 +620,5 @@ body.light-theme .pdf-viewer-container {
     margin-top: 0;
     line-height: 1.2;
 }
+
+
