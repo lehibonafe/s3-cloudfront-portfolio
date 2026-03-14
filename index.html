@@ -1,538 +1,205 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta
-            name="description"
-            content="Lehi Bonafe - Site Reliability Engineer specializing in AWS, DevOps, and cloud infrastructure. 2x AWS certified with expertise in Terraform, Docker, and CI/CD."
-        />
-        <meta
-            name="keywords"
-            content="Site Reliability Engineer, DevOps, AWS, Cloud, Terraform, Docker, SRE, Infrastructure"
-        />
-        <meta name="author" content="Lehi Bonafe" />
-        <meta
-            property="og:title"
-            content="Lehi Bonafe - Site Reliability Engineer"
-        />
-        <meta
-            property="og:description"
-            content="Site Reliability Engineer specializing in AWS, DevOps, and cloud infrastructure. 2x AWS certified."
-        />
-        <meta property="og:type" content="website" />
-        <meta name="twitter:card" content="summary" />
-        <meta
-            name="twitter:title"
-            content="Lehi Bonafe - Site Reliability Engineer"
-        />
-        <meta
-            name="twitter:description"
-            content="Site Reliability Engineer specializing in AWS, DevOps, and cloud infrastructure."
-        />
-        <title>Lehi | Portfolio</title>
-        <link rel="icon" href="data:," />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
-            rel="stylesheet"
-        />
-        <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
-            media="print"
-            onload="this.media = 'all'"
-        />
-        <noscript>
-            <link
-                rel="stylesheet"
-                href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
-            />
-        </noscript>
-        <link rel="stylesheet" href="style.css" />
-    </head>
-
-    <body>
-        <div class="container">
-            <!-- Profile Header -->
-            <div class="profile-header">
-                <div class="profile-image">
-                    <img src="./profile.jpg" alt="" />
-                </div>
-                <div class="profile-info">
-                    <h1>Lehi Bonafe</h1>
-                    <div class="location">
-                        <i class="bi bi-geo-alt"></i>
-                        Makati City, Philippines
-                    </div>
-                    <div class="title">
-                        <span class="title-item">DevOps</span>
-                        <span class="title-separator">x</span>
-                        <span class="title-item">SRE</span>
-                    </div>
-                    <div class="action-buttons">
-                        <a href="#" class="btn btn-secondary">
-                            <i class="bi bi-calendar-check"></i>
-                            Schedule a Call
-                        </a>
-                        <a href="#" class="btn btn-secondary">
-                            <i class="bi bi-envelope-at"></i>
-                            Send Email
-                        </a>
-                        <a
-                            href="https://www.credly.com/users/lehi-bonafe"
-                            target="_blank"
-                            class="btn btn-certified"
-                        >
-                            <i class="bi bi-award-fill"></i>
-                            <span class="btn-text">2x AWS Certified</span>
-                        </a>
-                    </div>
-                </div>
-                <!-- Theme Toggle Button -->
-                <button
-                    class="theme-toggle"
-                    id="themeToggle"
-                    aria-label="Toggle theme"
-                >
-                    <div class="toggle-track">
-                        <div class="toggle-thumb">
-                            <i class="bi bi-moon-fill dark-icon"></i>
-                            <i class="bi bi-sun-fill light-icon"></i>
-                        </div>
-                    </div>
-                </button>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lehi | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <span>☁️</span>
+                <span>cloudle</span>
             </div>
-
-            <!-- About Section -->
-            <div class="card about">
-                <div class="section-title">
-                    <i class="bi bi-person section-icon"></i>
-                    About
+            <nav>
+                <a href="#" data-page="about" class="nav-item active">
+                    <span>about</span>
+                </a>
+                <a href="#" data-page="projects" class="nav-item">
+                    <span>projects</span>
+                </a>
+                <a href="#" data-page="certs" class="nav-item">
+                    <span>certs</span>
+                </a>
+                <a href="#" data-page="resume" class="nav-item">
+                    <span>resume</span>
+                </a>
+            </nav>
+        </div>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+            <div class="toggle-track">
+                <div class="toggle-thumb">
+                    <span class="dark-icon">🌙</span>
+                    <span class="light-icon">☀️</span>
                 </div>
-                <p style="margin-bottom: 16px; color: #d0d0d0;">
-                    I am a Site Reliability Engineer at eTap Inc., a fintech company based in the Philippines that specializes in manufacturing 
-                    self-service payment machines. I work on cloud infrastructure, monitoring, incident response, automation, and 
-                    cross-team collaboration using AWS, Docker, CI/CD pipelines, Python, and AI-driven solutions. 
-                </p>
-
-                <p style="margin-bottom: 16px; color: #d0d0d0;">
-                    I've helped community solved simple to complex problems
-                    through stackoverflow posts and community pages. I'm
-                    passionate about sharing knowledge and helping others grow.
-                </p>
             </div>
+        </button>
+    </header>
 
-            <!-- Experience -->
-            <div class="card">
-                <div class="section-title">
-                    <i class="bi bi-briefcase" style="font-size: 18px"></i>
-                    Experience
-                </div>
-
-                <div class="experience-item">
-                    <div class="experience-header">
-                        <div>
-                            <div class="experience-title">
-                                Jr. Site Reliability Engineer
-                            </div>
-                            <div class="experience-company">
-                                Electronics Transfer & Advance Processing Inc.
-                            </div>
+    <main>
+        <!-- About Section -->
+        <section id="about" class="page-section active">
+            <div class="hero-section">
+                <h1 class="hero-title">SRE & DevOps <br> Engineer</h1>
+                <p class="hero-description">Hi, my name is Lehi. I'm a SRE/DevOps Engineer with expertise in designing, deploying, and managing AWS cloud infrastructure.</p>
+                <a href="https://www.linkedin.com/in/lehi-bonafe/" target="_blank" class="cta-button">~$ Get In Touch -></a>
+            </div>
+            
+            <div class="logo-slider-section">
+                <div class="logo-slider">
+                    <div class="logo-track">
+                        <div class="logo-item">
+                            <img src="images/linux.png" alt="Linux">
                         </div>
-                        <div class="experience-duration">2025</div>
-                    </div>
-                </div>
-
-                <div class="experience-item">
-                    <div class="experience-header">
-                        <div>
-                            <div class="experience-title">IT Analyst</div>
-                            <div class="experience-company">
-                                LausGroup of Companies
-                            </div>
+                        <div class="logo-item">
+                            <img src="images/docker.png" alt="Docker">
                         </div>
-                        <div class="experience-duration">2024</div>
+                        <div class="logo-item">
+                            <img src="images/git.png" alt="Git">
+                        </div>
+                        <div class="logo-item">
+                            <img src="images/aws.png" alt="AWS">
+                        </div>
+                        <div class="logo-item">
+                            <img src="images/python.png" alt="Python">
+                        </div>
+                        <div class="logo-item">
+                            <img src="images/github.png" alt="Github">
+                        </div>
+                        <div class="logo-item">
+                            <img src="images/terraform.png" alt="Terraform">
+                        </div>
+                        <div class="logo-item"> 
+                            <img src="images/grafana.png" alt="Grafana">
+                        </div>
+                        <!-- Duplicate for seamless loop -->
+                        <div class="logo-item">
+                            <img src="images/linux.png" alt="Linux">
+                        </div>
+                        <div class="logo-item">
+                            <img src="images/docker.png" alt="Docker">
+                        </div>
+                        <div class="logo-item">
+                            <img src="images/git.png" alt="Git">
+                        </div>
+                        <div class="logo-item">
+                            <img src="images/aws.png" alt="AWS">
+                        </div>
+                        <div class="logo-item">
+                            <img src="images/python.png" alt="Python">
+                        </div>
+                        <div class="logo-item">
+                            <img src="images/github.png" alt="Github">
+                        </div>
+                        <div class="logo-item">
+                            <img src="images/terraform.png" alt="Terraform">
+                        </div>
+                        <div class="logo-item"> 
+                            <img src="images/grafana.png" alt="Grafana">
+                        </div>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <!-- Tech Stack -->
-            <div class="card">
-                <div class="section-title">
-                    <i class="bi bi-terminal section-icon"></i>
-                    Tech Stack
-                </div>
-
-                <div>
-                    <p class="tech-tags-title">DevOps & Cloud</p>
-                    <div class="tech-tags">
-                        <span class="tag">AWS</span>
-                        <span class="tag">Linux</span>
-                        <span class="tag">Docker</span>
-                        <span class="tag">Terraform</span>
-                        <span class="tag">Python</span>
-                        <span class="tag">Grafana</span>
-                        <span class="tag">GitHub Actions</span>
-                        <span class="tag">Bash</span>
-                        <span class="tag">Git</span>
-                        <span class="tag">Yaml</span>
-                        <span class="tag">HTML</span>
-                        <span class="tag">CSS</span>
-
-                    </div>
+        <!-- Projects Section -->
+        <section id="projects" class="page-section">
+            <h1>Projects</h1>
+            <p>A showcase of cloud infrastructure and DevOps projects I've worked on, demonstrating expertise in automation, scalability, and modern cloud technologies.</p>
+            <div class="divider"></div>
+            
+            <div class="project-card">
+                <h3 class="project-title">SSH PEM Key Automated Rotation via SSM Run Command</h3>
+                <p class="project-description">Migrated on-premise infrastructure to AWS and Azure using Terraform and automated CI/CD pipelines. Reduced infrastructure costs by 40% and improved deployment speed by 10x.</p>
+                <div class="tech-stack">
+                    <span class="badge">AWS</span>
+                    <span class="badge">Azure</span>
+                    <span class="badge">Terraform</span>
+                    <span class="badge">Jenkins</span>
                 </div>
             </div>
-
-            <!-- Recent Certifications -->
-            <div class="card">
-                <div class="section-title">
-                    <i
-                        class="bi bi-trophy section-icon style"
-                        style="font-size: 18px"
-                    ></i>
-                    Certifications
+            
+            <div class="project-card">
+                <h3 class="project-title">S3 Static Website with Route53 DNS</h3>
+                <p class="project-description">Designed and deployed production-grade Kubernetes clusters with auto-scaling, monitoring, and disaster recovery. Managed 100+ microservices across multiple environments.</p>
+                <div class="tech-stack">
+                    <span class="badge">Kubernetes</span>
+                    <span class="badge">Helm</span>
+                    <span class="badge">Prometheus</span>
+                    <span class="badge">Grafana</span>
                 </div>
-
-                <div class="certification-item">
-                    <a
-                        href="https://www.credly.com/badges/afa42e10-0896-4556-8690-b2b6e2a087c6/public_url"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        ><span style="color: #d0d0d0"
-                            >AWS Solution Architect - Associate</span
-                        ></a
-                    >
-                </div>
-
-                <div class="certification-item">
-                    <a
-                        href="https://www.credly.com/badges/bb32d38b-605e-4065-bf42-3457ad77d2e8/public_url"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        ><span style="color: #d0d0d0"
-                            >AWS Developer - Associate</span
-                        ></a
-                    >
-                </div>
-
             </div>
-
-            <!-- Recent Projects -->
-            <div class="card">
-                <div class="section-title">
-                    <i class="bi bi-cloud section-icon"></i>
-                    Recent Projects
+            
+            <div class="project-card">
+                <h3 class="project-title">Serverless Application Architecture</h3>
+                <p class="project-description">Built serverless applications using AWS Lambda, API Gateway, and DynamoDB. Achieved 99.99% uptime with automatic scaling and cost optimization.</p>
+                <div class="tech-stack">
+                    <span class="badge">AWS Lambda</span>
+                    <span class="badge">API Gateway</span>
+                    <span class="badge">DynamoDB</span>
+                    <span class="badge">CloudWatch</span>
                 </div>
+            </div>
+        </section>
 
-                <div class="projects-grid">
-                    <div class="project-card">
-                        <div class="project-content">
-                            <div class="project-header-row">
-                                <h3 class="project-title">
-                                    <a href="https://github.com/lehibonafe/mern_docker_aws"
-                                    target="_blank">
-                                        ECS Deploy Pipeline
-                                    </a>
-                
-                                </h3>
+        <!-- Certs Section -->
+        <section id="certs" class="page-section">
+            <div class="hero-section" style="padding-top: 1rem;">
+                <h1 class="hero-title">Certifications</h1>
+                <p class="hero-description">Professional certifications demonstrating expertise in cloud platforms, DevOps practices, and infrastructure management.</p>
+            </div>
+            
+            <div class="section">
+                <div class="certs-grid">
+                    <div class="card">
+                        <div class="card-icon"><img src="./images/aws-solarc.png" alt=""></div>
+                        <div class="card-content">
+                            <h3>AWS Solutions Architect</h3>
+                            <p>Amazon Web Services - Professional level certification for designing distributed systems on AWS.</p>
+                            <div class="tech-stack">
+                                <span class="badge">AWS</span>
+                                <span class="badge">Cloud Architecture</span>
                             </div>
-                            <div class="project-info">
-                                <p class="project-description">
-                                    Build a fully automated CI/CD pipeline for a
-                                    fullstack containerized application using GitHub Actions.
-                                    Build Docker images, push them to Amazon
-                                    ECR, and deploy to ECS Fargate behind an
-                                    Application Load Balancer.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project-card">
-                        <div class="project-content">
-                            <div class="project-header-row">
-                                <h3 class="project-title">
-                                    <a href="https://github.com/lehibonafe/bastion-nat-terraform"
-                                    target="_blank">
-                                    Bastion NAT terraform</a>
-                                </h3>
-                            </div>
-                            <div class="project-info">
-                                <p class="project-description">
-                                    Automated resource provisioning for a secure AWS network architecture
-                                    using Terraform including a bastion host and NAT gateway.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project-card">
-                        <div class="project-content">
-                            <div class="project-header-row">
-                                <h3 class="project-title">
-                                    <a href="">Cloud FinSight</a>
-                                </h3>
-                            </div>
-                            <div class="project-info">
-                                <p class="project-description">
-                                    Automated resource provisioning for a secure AWS network architecture
-                                    using Terraform including a bastion host and NAT gateway.
-                                </p>
-                            </div>
+                            <a href="#" class="project-button">View Certificate</a>
                         </div>
                     </div>
                     
-                </div>
-            </div>
-
-            <!-- Beyond Coding -->
-            <div class="card beyond-coding">
-                <div class="section-title">
-                    <i class="bi bi-cup-hot section-icon"></i>
-                    Beyond Coding
-                </div>
-                <p style="margin-bottom: 16px; color: #d0d0d0">
-                    When I'm not coding, I'm passionate about learning about
-                    emerging technologies, minimalism, and startup culture.
-                </p>
-                <p>
-                    I love building things from scratch, ask questions, and understanding
-                    architecture designs. I enjoy reading tech blogs, listening to podcasts,
-                    and engaging with developer communities to stay updated with the latest trends.
-                </p>
-            </div>
-
-            <!-- Recommendations -->
-            <div class="card">
-                <div class="section-title">
-                    <i class="bi bi-chat-square section-icon"></i>
-                    Recommendations
-                </div>
-
-                <div class="recommendations-grid">
-                    <div class="recommendation-card">
-                        <div class="recommendation-header">
-                            <div class="recommendation-info">
-                                <div class="recommendation-author">
-                                    John Doe
-                                    <div class="recommendation-rating">
-                                        <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-fill"></i>
-                                    </div>
-                                </div>
-                                <div class="recommendation-role">
-                                    Senior Developer at Exilicate
-                                </div>
+                    <div class="card">
+                        <div class="card-icon"><img src="./images/aws-developer.png" alt=""></div>
+                        <div class="card-content">
+                            <h3>AWS Developer</h3>
+                            <p>Microsoft Azure - Certification for implementing, managing, and monitoring Azure environments.</p>
+                            <div class="tech-stack">
+                                <span class="badge">Azure</span>
+                                <span class="badge">Cloud Management</span>
                             </div>
-                        </div>
-                        <div class="recommendation-text">
-                            "Exceptional engineer with strong leadership.
-                            Consistently delivers high-quality solutions and
-                            mentors team members effectively."
+                            <a href="#" class="project-button">View Certificate</a>
                         </div>
                     </div>
-
-                    <div class="recommendation-card">
-                        <div class="recommendation-header">
-                            <div class="recommendation-info">
-                                <div class="recommendation-author">
-                                    Mark Reyes
-                                    <div class="recommendation-rating">
-                                        <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-fill"></i>
-                                    </div>
-                                </div>
-                                <div class="recommendation-role">
-                                    DevOps Manager at TechCorp
-                                </div>
-                            </div>
-                        </div>
-                        <div class="recommendation-text">
-                            "Outstanding AWS expertise. Reduced deployment time
-                            by 60% and significantly improved system
-                            reliability. True DevOps professional."
-                        </div>
-                    </div>
+                    
+                    
                 </div>
             </div>
+        </section>
 
-            <!-- Connect -->
-            <div class="card">
-                <div class="section-title">
-                    <i class="bi bi-person-plus section-icon"></i>
-                    Let's Connect
-                </div>
-
-                <div class="connect-grid">
-                    <a
-                        href="https://github.com/lehibonafe"
-                        target="_blank"
-                        class="connect-card"
-                    >
-                        <div class="connect-icon">
-                            <i class="bi bi-github"></i>
-                        </div>
-                        <div class="connect-info">
-                            <div class="connect-platform">GitHub</div>
-                            <div class="connect-handle">@lehibonafe</div>
-                        </div>
-                    </a>
-
-                    <a
-                        href="https://linkedin.com/in/lehi-bonafe"
-                        target="_blank"
-                        class="connect-card"
-                    >
-                        <div class="connect-icon">
-                            <i class="bi bi-linkedin"></i>
-                        </div>
-                        <div class="connect-info">
-                            <div class="connect-platform">LinkedIn</div>
-                            <div class="connect-handle">lehi-bonafe</div>
-                        </div>
-                    </a>
-
-                    <a href="mailto:bonafe.lehi@gmail.com" class="connect-card">
-                        <div class="connect-icon">
-                            <i class="bi bi-envelope-at"></i>
-                        </div>
-                        <div class="connect-info">
-                            <div class="connect-platform">Email</div>
-                            <div class="connect-handle">
-                                bonafe.lehi@gmail.com
-                            </div>
-                        </div>
-                    </a>
-
-                    <a
-                        href="viber://chat?number=639204164495"
-                        class="connect-card"
-                    >
-                        <div class="connect-icon">
-                            <i class="bi bi-telephone-fill"></i>
-                        </div>
-                        <div class="connect-info">
-                            <div class="connect-platform">Viber</div>
-                            <div class="connect-handle">+63 920 416 4495</div>
-                        </div>
-                    </a>
-                </div>
+        <!-- Resume Section -->
+        <section id="resume" class="page-section">
+            <div class="resume-header">
+                <h1>Resume</h1>
+                <a href="resume.pdf" download class="download-button">
+                    📥 Download PDF
+                </a>
             </div>
-
-            <!-- Recent Blog Posts
-        <div class="card">
-            <div class="section-title">📝 Recent Blog Posts <a href="#" class="view-all">View All</a></div>
-
-            <div class="blog-post">
-                <div class="blog-title">Mastering Laravel Collections: Beyond the Basics</div>
-                <div class="blog-meta">May 28, 2025 • 5 min read</div>
-                <div class="blog-tags">
-                    <span class="blog-tag">Laravel</span>
-                    <span class="blog-tag">Programming</span>
-                    <span class="blog-tag">Web Development</span>
-                    <span class="blog-tag">Tutorial</span>
-                </div>
+            <div class="divider"></div>
+            
+            <div class="pdf-viewer-container">
+                <iframe src="resume.pdf" class="pdf-viewer" frameborder="0"></iframe>
             </div>
+        </section>
+    </main>
 
-            <div class="blog-post">
-                <div class="blog-title">Laravel Eloquent: Mastering Relationships for Efficient Data Management</div>
-                <div class="blog-meta">May 27, 2025 • 3 min read</div>
-                <div class="blog-tags">
-                    <span class="blog-tag">Laravel</span>
-                    <span class="blog-tag">Programming</span>
-                    <span class="blog-tag">Web Development</span>
-                    <span class="blog-tag">Tutorial</span>
-                </div>
-            </div>
-
-            <div class="blog-post">
-                <div class="blog-title">Mastering Eloquent Relationships in Laravel: A Practical Guide</div>
-                <div class="blog-meta">May 26, 2025 • 4 min read</div>
-                <div class="blog-tags">
-                    <span class="blog-tag">Laravel</span>
-                    <span class="blog-tag">Programming</span>
-                    <span class="blog-tag">Web Development</span>
-                    <span class="blog-tag">Tutorial</span>
-                </div>
-            </div>
-        </div>
-         -->
-        </div>
-
-        <footer class="footer">
-            <div class="footer-content">
-                <p>© 2025 Lehi Bonafe. All rights reserved.</p>
-            </div>
-        </footer>
-
-        <script>
-            // Optimized interactive functionality
-            document.addEventListener("DOMContentLoaded", function () {
-                // Theme toggle with system preference detection
-                const themeToggle = document.getElementById("themeToggle");
-                const body = document.body;
-
-                // Check system preference first, then saved preference
-                const systemPrefersDark = window.matchMedia(
-                    "(prefers-color-scheme: dark)",
-                ).matches;
-                const savedTheme =
-                    localStorage.getItem("theme") ||
-                    (systemPrefersDark ? "dark" : "light");
-
-                if (savedTheme === "light") {
-                    body.classList.add("light-theme");
-                }
-
-                themeToggle?.addEventListener("click", function () {
-                    body.classList.toggle("light-theme");
-                    const currentTheme = body.classList.contains("light-theme")
-                        ? "light"
-                        : "dark";
-                    localStorage.setItem("theme", currentTheme);
-                });
-
-                // Optimized scroll animations with reduced motion support
-                if (
-                    !window.matchMedia("(prefers-reduced-motion: reduce)")
-                        .matches
-                ) {
-                    const cards = document.querySelectorAll(".card");
-
-                    if (cards.length > 0) {
-                        const observer = new IntersectionObserver(
-                            (entries) => {
-                                entries.forEach((entry) => {
-                                    if (entry.isIntersecting) {
-                                        entry.target.style.opacity = "1";
-                                        entry.target.style.transform =
-                                            "translateY(0)";
-                                    }
-                                });
-                            },
-                            { threshold: 0.1, rootMargin: "50px" },
-                        );
-
-                        cards.forEach((card) => {
-                            card.style.opacity = "0";
-                            card.style.transform = "translateY(20px)";
-                            card.style.transition =
-                                "opacity 0.6s ease, transform 0.6s ease";
-                            observer.observe(card);
-                        });
-                    }
-                }
-
-                // Tags now use CSS-only hover effects (glow)
-            });
-        </script>
-    </body>
+    <script src="script.js"></script>
+</body>
 </html>
