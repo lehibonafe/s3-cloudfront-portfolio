@@ -39,15 +39,6 @@ Multiple ways to connect:
 - LinkedIn: [lehi-bonafe](https://linkedin.com/in/lehi-bonafe)
 - Email: bonafe.lehi@gmail.com
 
-## Portfolio Philosophy
-
-This portfolio reflects my approach to technology and professional development:
-
-- **Reliability First**: Every solution is designed with reliability and scalability in mind
-- **Continuous Learning**: Staying current with AWS services and DevOps best practices
-- **Community Focused**: Sharing knowledge and helping others grow in their tech careers
-- **Practical Solutions**: Building real-world applications that solve actual business problems
-
 ## Project Highlights
 
 ### AWS Infrastructure Projects
