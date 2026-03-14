@@ -29,9 +29,6 @@ My technical stack spans across multiple domains:
 - AWS CloudOps Engineer - Associate (In Progress)
 - Terraform Associate (In Progress)
 
-### 🚀 Featured Projects
-- **AWS Bastion Host with NAT Gateway**: Secure two-tier AWS network infrastructure using Terraform
-- **GitLab CI/CD Terraform**: Comprehensive DevOps education platform
 
 ### 🤝 Connect & Contact
 Multiple ways to connect:
