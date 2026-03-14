@@ -23,9 +23,4 @@ My technical stack spans across multiple domains:
 - **Site Reliability Engineer** at Electronics Transfer & Advance Processing Inc. (2026)
 - **IT Analyst** at LausGroup of Companies (2024)
 
-### 🏆 Certifications
-- AWS Solution Architect - Associate (Verified on Credly)
-- AWS Developer - Associate (Verified on Credly)
-- AWS CloudOps Engineer - Associate (In Progress)
-- Terraform Associate (In Progress)
 
