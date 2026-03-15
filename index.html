@@ -104,42 +104,56 @@
             </div>
         </section>
 
-        <!-- Projects Section -->
+                <!-- Projects Section -->
         <section id="projects" class="page-section">
             <h1>Projects</h1>
-            <p>A showcase of cloud infrastructure and DevOps projects I've worked on, demonstrating expertise in automation, scalability, and modern cloud technologies.</p>
             <div class="divider"></div>
-            
+
             <div class="project-card">
-                <h3 class="project-title">Automatic SSH Key Rotation via AWS Systems Manager Run Command</h3>
-                <p class="project-description">Migrated on-premise infrastructure to AWS and Azure using Terraform and automated CI/CD pipelines. Reduced infrastructure costs by 40% and improved deployment speed by 10x.</p>
-                <div class="tech-stack">
-                    <span class="badge">AWS</span>
-                    <span class="badge">Azure</span>
-                    <span class="badge">Terraform</span>
-                    <span class="badge">Jenkins</span>
+                <div class="project-info">
+                    <div class="tech-stack">
+                        <span class="badge">AWS</span>
+                        <span class="badge">SSM</span>
+                        <span class="badge">Bash</span>
+                    </div>
+                    <h3 class="project-title">SSH PEM Key Automated Rotation via SSM Run Command</h3>
+                    <p class="project-description">Automated SSH PEM key rotation across EC2 instances using AWS SSM Run Command, eliminating manual access and reducing security risk.</p>
+                    <a href="#" class="project-button">See More</a>
+                </div>
+                <div class="project-image">
+                    <img src="./images/aws.png" alt="SSH PEM Key Rotation">
                 </div>
             </div>
-            
+
             <div class="project-card">
-                <h3 class="project-title">S3 Static Website with Route53 DNS</h3>
-                <p class="project-description">Designed and deployed production-grade Kubernetes clusters with auto-scaling, monitoring, and disaster recovery. Managed 100+ microservices across multiple environments.</p>
-                <div class="tech-stack">
-                    <span class="badge">Kubernetes</span>
-                    <span class="badge">Helm</span>
-                    <span class="badge">Prometheus</span>
-                    <span class="badge">Grafana</span>
+                <div class="project-info">
+                    <div class="tech-stack">
+                        <span class="badge">AWS S3</span>
+                        <span class="badge">Route53</span>
+                        <span class="badge">CloudFront</span>
+                    </div>
+                    <h3 class="project-title">S3 Static Website with Route53 DNS</h3>
+                    <p class="project-description">Deployed a static portfolio site on S3 with CloudFront CDN and Route53 DNS, achieving fast global delivery and 99.99% uptime.</p>
+                    <a href="#" class="project-button">See More</a>
+                </div>
+                <div class="project-image">
+                    <img src="./images/aws.png" alt="S3 Static Website">
                 </div>
             </div>
-            
+
             <div class="project-card">
-                <h3 class="project-title">Serverless Application Architecture</h3>
-                <p class="project-description">Built serverless applications using AWS Lambda, API Gateway, and DynamoDB. Achieved 99.99% uptime with automatic scaling and cost optimization.</p>
-                <div class="tech-stack">
-                    <span class="badge">AWS Lambda</span>
-                    <span class="badge">API Gateway</span>
-                    <span class="badge">DynamoDB</span>
-                    <span class="badge">CloudWatch</span>
+                <div class="project-info">
+                    <div class="tech-stack">
+                        <span class="badge">AWS Lambda</span>
+                        <span class="badge">API Gateway</span>
+                        <span class="badge">DynamoDB</span>
+                    </div>
+                    <h3 class="project-title">Serverless Application Architecture</h3>
+                    <p class="project-description">Built serverless applications using AWS Lambda, API Gateway, and DynamoDB. Achieved 99.99% uptime with automatic scaling and cost optimization.</p>
+                    <a href="#" class="project-button">See More</a>
+                </div>
+                <div class="project-image">
+                    <img src="./images/aws.png" alt="Serverless Architecture">
                 </div>
             </div>
         </section>
@@ -194,5 +208,6 @@
     <script src="script.js"></script>
 </body>
 </html>
+
 
 
