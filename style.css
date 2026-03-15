@@ -769,6 +769,6 @@ body.light-theme .project-image {
     opacity: 1;
 }
 
-.project-image img {
+/** .project-image img {
     cursor: zoom-in;
-}
+} **/
