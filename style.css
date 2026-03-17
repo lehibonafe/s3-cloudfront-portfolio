@@ -318,7 +318,7 @@ p {
 
 .hero-section {
     padding: 6rem 0 4rem 0;
-    margin-top: 3rem;
+    margin-top: 6rem;
 }
 
 .hero-title {
@@ -499,7 +499,7 @@ body.light-theme .badge:hover {
 }
 
 .logo-slider-section {
-    margin-top: 4rem;
+    margin-top: 3.5rem;
     margin-bottom: 2rem;
 }
 
@@ -836,7 +836,7 @@ body.light-theme .project-image {
     /* Hero */
     .hero-section {
         padding: 3rem 0 2rem 0;
-        margin-top: 1rem;
+        margin-top: 10rem;
     }
 
     .hero-title {
