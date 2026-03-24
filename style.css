@@ -94,7 +94,7 @@ header {
 }
 
 .header-content {
-    max-width: 1200px;
+    max-width: 1300px;
     margin: 0 auto;
     padding: 1.5rem 2rem;
     display: flex;
@@ -260,7 +260,7 @@ body.light-theme .theme-toggle:hover .toggle-track {
 }
 
 main {
-    max-width: 1200px;
+    max-width: 1300px;
     margin: 0 auto;
     padding: 4rem 2rem;
     min-height: calc(100vh - 80px);
@@ -318,11 +318,11 @@ p {
 
 .hero-section {
     padding: 6rem 0 4rem 0;
-    margin-top: 6rem;
+    margin-top: 3rem;
 }
 
 .hero-title {
-    font-size: 5.8rem;
+    font-size: 7rem;
     font-weight: 700;
     color: #ffffff;
     margin-bottom: 1rem;
