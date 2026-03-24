@@ -425,12 +425,7 @@ body.light-theme .cta-button {
     border: 1px solid #2a2a2a;
 }
 
-.badge:hover {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: #ffffff;
-    border-color: transparent;
-    transform: scale(1.05);
-}
+
 
 body.light-theme .badge {
     background-color: #d0d0d0;
@@ -438,11 +433,6 @@ body.light-theme .badge {
     border: 1px solid #c0c0c0;
 }
 
-body.light-theme .badge:hover {
-    background-color: #2a2a2a;
-    color: #ffffff;
-    border-color: transparent;
-}
 
 .divider {
     height: 1px;
@@ -575,7 +565,7 @@ body.light-theme .logo-item {
 
 .resume-header {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     margin-bottom: 1rem;
 }
@@ -592,6 +582,10 @@ body.light-theme .logo-item {
     font-size: 0.95rem;
     font-weight: 600;
     transition: all 0.3s ease;
+}
+
+.download-button:hover {
+    opacity: 0.85;
 }
 
 
