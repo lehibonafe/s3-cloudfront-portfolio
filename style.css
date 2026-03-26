@@ -695,7 +695,7 @@ body.light-theme .pdf-viewer-container {
     height: 300px;
     border-radius: 12px;
     overflow: hidden;
-    background-color: #111;
+    background-color: #0a0a0a;
     display: flex;
     align-items: center;
     justify-content: center;
