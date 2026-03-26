@@ -75,12 +75,7 @@ body.light-theme .divider {
 }
 
 body.light-theme .theme-toggle {
-    background-color: #e8e8e8;
     color: #2a2a2a;
-}
-
-body.light-theme .theme-toggle:hover {
-    background-color: #d8d8d8;
 }
 
 header {
@@ -320,7 +315,7 @@ p {
 }
 
 .hero-title {
-    font-size: 7rem;
+    font-size: 5rem;
     font-weight: 700;
     color: #ffffff;
     margin-bottom: 1rem;
@@ -862,7 +857,7 @@ body.light-theme .project-image {
     }
 
     .hero-title {
-        font-size: 2.8rem;
+        font-size: 3.5rem;
     }
 
     .hero-description {
@@ -925,7 +920,7 @@ body.light-theme .project-image {
 /* ── Small mobile (≤ 480px) ── */
 @media (max-width: 480px) {
     .hero-title {
-        font-size: 2.5rem;
+        font-size: 3rem;
     }
 
     .nav-item span {
