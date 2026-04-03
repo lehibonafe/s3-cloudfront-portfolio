@@ -1,5 +1,35 @@
-## About Me
-This portfolio represents my professional experience and technical expertise as a Site Reliability Engineer with a passion for cloud technologies and automation. Currently working at Electronics Transfer & Advance Processing Inc., I specialize in building scalable, reliable systems using AWS services, Infrastructure as Code, and modern DevOps practices.
+## Overview
+The goal of this project is to build a static website using **AWS S3**, **Cloudfront**, **Route53**, **ACM**, and **IAM** with **namecheap** as domain registar and automatic deployment pipeline with **GitHub Actions**.
+
+## Architecture
+<img width="1351" height="432" alt="s3-website-architecture" src="https://github.com/user-attachments/assets/89130586-8f99-4330-91c5-15aa7bed0f58" />
+
+## Setup & Usage
+### 1. Create a S3 Bucket
+### 1. Clone the repository
+```
+git clone https://github.com/lehibonafe/s3-cloudfront-portfolio.git
+cd s3-cloudfront-portfolio
+```
+### 2. Make changes locally
+Edit HTML, CSS, or JavaScript files.
+
+### 3. Push changes
+```
+git add .
+git commit -m "Update website"
+git push origin main
+```
+### 4. Automatic Deployment
+Deployment runs automatically via GitHub Actions.
+
+
+
+
+## Blog Post
+[https://cloud-lehi.com/](https://cloud-lehi.com/)
+
+```git clone https://github.com/lehibonafe/s3-cloudfront-portfolio.git```
 
 ### Professional Highlights
 
