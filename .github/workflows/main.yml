@@ -31,7 +31,7 @@ jobs:
           role-to-assume: arn:aws:iam::${{ secrets.AWS_ACCOUNT_ID }}:role/GitHubOIDC
           aws-region: ${{ secrets.AWS_REGION }}
       
-      - name: sts get-caller-identity
+      - name: Fetch Caller Identity
         run: | 
           aws sts get-caller-identity
 
