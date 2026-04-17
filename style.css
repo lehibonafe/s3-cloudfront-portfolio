@@ -711,7 +711,7 @@ body.light-theme .pdf-viewer-container {
     gap: 3rem;
     background-color: #0a0a0a;
     border-radius: 16px;
-    padding: 2.5rem 3rem;
+    padding: 2.5rem 0;
     margin-bottom: 1.5rem;
     overflow: hidden;
 }
@@ -740,8 +740,8 @@ body.light-theme .pdf-viewer-container {
 
 .project-image {
     flex-shrink: 0;
-    width: 480px;
-    height: 300px;
+    width: 600px;
+    height: 350px;
     border-radius: 12px;
     overflow: hidden;
     background-color: #0a0a0a;
