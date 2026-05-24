@@ -1,129 +1,65 @@
-function showPage(pageName, pushState = true) {
-    document.querySelectorAll('.page-section').forEach(section => {
-        section.classList.remove('active');
-    });
-
-    const selectedSection = document.getElementById(pageName);
-    if (selectedSection) {
-        selectedSection.classList.add('active');
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+// Reveal on scroll
+const io = new IntersectionObserver((entries) => {
+  entries.forEach((e) => {
+    if (e.isIntersecting) {
+      e.target.classList.add('in');
+      io.unobserve(e.target);
     }
+  });
+}, { threshold: 0.08 });
+document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
 
-    document.querySelectorAll('.nav-item').forEach(link => {
-        link.classList.remove('active');
-        if (link.dataset.page === pageName) {
-            link.classList.add('active');
-        }
-    });
+// Theme toggle
+const root = document.documentElement;
+const buttons = document.querySelectorAll('[data-theme-btn]');
 
-    if (pushState) {
-        history.pushState({ page: pageName }, '', '/' + pageName);
-    }
-}
+const stored = (() => {
+  try { return localStorage.getItem('theme'); } catch (e) { return null; }
+})();
+const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+const initial = stored || (prefersDark ? 'dark' : 'light');
+applyTheme(initial);
 
-function toggleTheme() {
-    const body = document.body;
-    body.classList.toggle('light-theme');
-    const isLight = body.classList.contains('light-theme');
-    localStorage.setItem('theme', isLight ? 'light' : 'dark');
-    document.querySelector('.theme-icon').textContent = isLight ? '🌙' : '☀️';
-}
-
-document.addEventListener('DOMContentLoaded', function() {
-    document.querySelectorAll('.nav-item').forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            showPage(this.dataset.page);
-        });
-    });
-
-    const themeToggle = document.getElementById('themeToggle');
-    if (themeToggle) {
-        themeToggle.addEventListener('click', toggleTheme);
-    }
-
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'light') {
-        document.body.classList.add('light-theme');
-        document.querySelector('.theme-icon').textContent = '🌙';
-    } else {
-        document.querySelector('.theme-icon').textContent = '☀️';
-    }
-
-    window.addEventListener('popstate', function(e) {
-        const page = e.state?.page || 'about';
-        showPage(page, false);
-    });
-
-    // Load page from URL path on initial visit
-    const validPages = ['about', 'projects', 'certs', 'resume'];
-    const path = window.location.pathname.replace(/^\//, '').trim();
-    const initialPage = validPages.includes(path) ? path : 'about';
-    showPage(initialPage, true);
-
-    // Lightbox
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImg = document.getElementById('lightboxImg');
-
-    document.querySelectorAll('.project-image img').forEach(img => {
-        img.addEventListener('click', () => {
-            lightboxImg.src = img.src;
-            lightboxImg.alt = img.alt;
-            lightbox.classList.add('open');
-        });
-    });
-
-    function closeLightbox() {
-        lightbox.classList.remove('open');
-        lightboxImg.src = '';
-    }
-
-    document.getElementById('lightboxClose').addEventListener('click', closeLightbox);
-    lightbox.addEventListener('click', (e) => {
-        if (e.target === lightbox) closeLightbox();
-    });
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') closeLightbox();
-    });
-
-        // Hamburger menu toggle
-    const hamburger = document.getElementById('hamburger');
-    const mainNav = document.getElementById('mainNav');
- 
-    function closeMenu() {
-        mainNav.classList.remove('open');
-        hamburger.classList.remove('open');
-        hamburger.setAttribute('aria-expanded', 'false');
-    }
- 
-    function openMenu() {
-        mainNav.classList.add('open');
-        hamburger.classList.add('open');
-        hamburger.setAttribute('aria-expanded', 'true');
-    }
- 
-    // Toggle open/close on hamburger click
-    hamburger.addEventListener('click', (e) => {
-        e.stopPropagation();
-        const isOpen = mainNav.classList.contains('open');
-        isOpen ? closeMenu() : openMenu();
-    });
- 
-    // Close menu when a nav item is clicked
-    mainNav.querySelectorAll('.nav-item').forEach(item => {
-        item.addEventListener('click', () => closeMenu());
-    });
- 
-    // Close menu when clicking outside
-    document.addEventListener('click', (e) => {
-        if (!hamburger.contains(e.target) && !mainNav.contains(e.target)) {
-            closeMenu();
-        }
-    });
- 
-    // Close menu on Escape key
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') closeMenu();
-    });
+buttons.forEach((b) => {
+  b.addEventListener('click', () => applyTheme(b.dataset.themeBtn));
 });
 
+function applyTheme(theme) {
+  root.setAttribute('data-theme', theme);
+  buttons.forEach((b) => b.classList.toggle('active', b.dataset.themeBtn === theme));
+  try { localStorage.setItem('theme', theme); } catch (e) {}
+}
+
+// Events slider (home page only)
+const slides = document.querySelectorAll('.event-item');
+const dotsWrap = document.querySelector('.events-dots');
+
+if (slides.length && dotsWrap) {
+  let current = 0;
+  let timer;
+
+  slides.forEach((_, i) => {
+    const dot = document.createElement('button');
+    dot.setAttribute('role', 'tab');
+    dot.setAttribute('aria-label', `Event ${i + 1}`);
+    dot.classList.toggle('active', i === 0);
+    dot.addEventListener('click', () => goTo(i));
+    dotsWrap.appendChild(dot);
+  });
+
+  function goTo(n) {
+    slides[current].classList.remove('active');
+    dotsWrap.children[current].classList.remove('active');
+    current = (n + slides.length) % slides.length;
+    slides[current].classList.add('active');
+    dotsWrap.children[current].classList.add('active');
+    resetTimer();
+  }
+
+  function resetTimer() {
+    clearInterval(timer);
+    timer = setInterval(() => goTo(current + 1), 5000);
+  }
+
+  resetTimer();
+}

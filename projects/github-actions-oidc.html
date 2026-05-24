@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Documentation: GitHub Actions × AWS via OIDC — Lehi Bonafe" />
+<title>GitHub Actions × AWS via OIDC — Lehi Bonafe</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Saira:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<header class="doc-header">
+  <div class="container doc-header-inner">
+    <a href="../index.html" class="doc-back">← Back to portfolio</a>
+    <div class="theme-toggle" role="group" aria-label="Theme">
+      <button type="button" data-theme-btn="light" class="active" title="Light theme">☀</button>
+      <button type="button" data-theme-btn="dark" title="Dark theme">☾</button>
+    </div>
+  </div>
+</header>
+
+<main class="container doc-main reveal">
+  <span class="project-index">02</span>
+  <h1 class="doc-title">GitHub Actions × AWS via OIDC</h1>
+  <p class="doc-lead">Replaced long-lived AWS access keys in GitHub with short-lived credentials using OpenID Connect and IAM role assumption — no secrets to rotate in the repository.</p>
+  <div class="project-tags">
+    <span>OIDC</span><span>IAM</span><span>Actions</span><span>Security</span>
+  </div>
+
+  <article class="doc-content">
+    <h2>Problem</h2>
+    <p>Storing <code>AWS_ACCESS_KEY_ID</code> and <code>AWS_SECRET_ACCESS_KEY</code> in GitHub secrets works but creates credential sprawl, rotation overhead, and a larger blast radius if a secret leaks.</p>
+
+    <h2>Solution</h2>
+    <p>GitHub Actions requests a JWT from GitHub's OIDC provider. AWS trusts that issuer via an IAM OIDC identity provider. A workflow assumes an IAM role using <code>sts:AssumeRoleWithWebIdentity</code> and receives temporary credentials scoped to what the role allows.</p>
+
+    <h2>Setup steps</h2>
+    <ul>
+      <li>Create an IAM OIDC provider for <code>token.actions.githubusercontent.com</code></li>
+      <li>Create an IAM role with a trust policy conditioned on repo, branch, or environment</li>
+      <li>Attach least-privilege policies (e.g. S3 deploy, ECR push only)</li>
+      <li>In the workflow, use <code>aws-actions/configure-aws-credentials</code> with <code>role-to-assume</code></li>
+    </ul>
+
+    <h2>Example trust condition</h2>
+    <pre>sub: repo:org/repo:ref:refs/heads/main</pre>
+    <p>Tighten conditions so only expected workflows and branches can assume the role. Avoid wildcard <code>*</code> on production roles.</p>
+
+    <h2>Outcomes</h2>
+    <ul>
+      <li>No static AWS keys in GitHub</li>
+      <li>Credentials expire automatically after the job</li>
+      <li>Auditable via CloudTrail <code>AssumeRoleWithWebIdentity</code> events</li>
+    </ul>
+  </article>
+
+  <div class="doc-footer-links">
+    <a href="https://github.com/lehibonafe" target="_blank" rel="noopener" class="btn">GitHub</a>
+    <a href="https://medium.com/@lehivelardebonafe/connecting-github-actions-to-aws-securely-with-oidc-and-iam-roles-123906542a9d" target="_blank" rel="noopener" class="btn">Original article</a>
+  </div>
+</main>
+
+<script src="../script.js"></script>
+</body>
+</html>

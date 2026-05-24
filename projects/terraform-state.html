@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Documentation: Terraform State Management — Lehi Bonafe" />
+<title>Terraform State Management — Lehi Bonafe</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Saira:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<header class="doc-header">
+  <div class="container doc-header-inner">
+    <a href="../index.html" class="doc-back">← Back to portfolio</a>
+    <div class="theme-toggle" role="group" aria-label="Theme">
+      <button type="button" data-theme-btn="light" class="active" title="Light theme">☀</button>
+      <button type="button" data-theme-btn="dark" title="Dark theme">☾</button>
+    </div>
+  </div>
+</header>
+
+<main class="container doc-main reveal">
+  <span class="project-index">04</span>
+  <h1 class="doc-title">Terraform State Management</h1>
+  <p class="doc-lead">Remote backend with S3 for state storage and DynamoDB for locking — teams can run <code>terraform apply</code> safely without overwriting each other's work.</p>
+  <div class="project-tags">
+    <span>Terraform</span><span>S3</span><span>DynamoDB</span><span>IaC</span>
+  </div>
+
+  <article class="doc-content">
+    <h2>Why remote state</h2>
+    <p>Local <code>terraform.tfstate</code> files do not scale for teams. Remote state in S3 is durable, versioned, and shared. DynamoDB provides a lock so two applies cannot run against the same state at once.</p>
+
+    <h2>Backend configuration</h2>
+    <pre>backend "s3" {
+  bucket         = "tf-state-example"
+  key            = "prod/terraform.tfstate"
+  region         = "ap-southeast-1"
+  dynamodb_table = "terraform-locks"
+  encrypt        = true
+}</pre>
+
+    <h2>Operational practices</h2>
+    <ul>
+      <li>Enable versioning on the state bucket for point-in-time recovery</li>
+      <li>Block public access and restrict IAM to CI and approved roles</li>
+      <li>Use separate state keys per environment (<code>dev/</code>, <code>prod/</code>)</li>
+      <li>Never commit <code>.tfstate</code> or secrets to git</li>
+    </ul>
+
+    <h2>CI integration</h2>
+    <p>GitHub Actions runs <code>terraform plan</code> on pull requests and <code>apply</code> on merge, using OIDC to assume a role with state bucket and lock table permissions only.</p>
+
+    <h2>Outcomes</h2>
+    <p>Predictable collaboration, audit trail via S3 versions, and infrastructure changes tracked the same way application code is.</p>
+  </article>
+
+  <div class="doc-footer-links">
+    <a href="https://github.com/lehibonafe" target="_blank" rel="noopener" class="btn">GitHub</a>
+  </div>
+</main>
+
+<script src="../script.js"></script>
+</body>
+</html>

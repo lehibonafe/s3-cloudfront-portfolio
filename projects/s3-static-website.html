@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Documentation: S3 Static Website with CloudFront — Lehi Bonafe" />
+<title>S3 Static Website with CloudFront — Lehi Bonafe</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Saira:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<header class="doc-header">
+  <div class="container doc-header-inner">
+    <a href="../index.html" class="doc-back">← Back to portfolio</a>
+    <div class="theme-toggle" role="group" aria-label="Theme">
+      <button type="button" data-theme-btn="light" class="active" title="Light theme">☀</button>
+      <button type="button" data-theme-btn="dark" title="Dark theme">☾</button>
+    </div>
+  </div>
+</header>
+
+<main class="container doc-main reveal">
+  <span class="project-index">01</span>
+  <h1 class="doc-title">S3 Static Website with CloudFront</h1>
+  <p class="doc-lead">Deployed a static portfolio on AWS with S3 and CloudFront for global delivery, Route 53 for DNS, and GitHub Actions for automated CI/CD on every push.</p>
+  <div class="project-tags">
+    <span>S3</span><span>CloudFront</span><span>Route 53</span><span>Actions</span>
+  </div>
+
+  <article class="doc-content">
+    <h2>Overview</h2>
+    <p>This project hosts a fully static site on AWS with no application servers. Assets live in S3, CloudFront caches and serves them at the edge, and GitHub Actions builds and deploys on merge to main.</p>
+
+    <h2>Architecture</h2>
+    <ul>
+      <li><strong>S3</strong> — private bucket; objects served only via CloudFront OAI/OAC</li>
+      <li><strong>CloudFront</strong> — HTTPS, compression, custom error pages for SPA-style routing if needed</li>
+      <li><strong>Route 53</strong> — alias record pointing the domain to the CloudFront distribution</li>
+      <li><strong>ACM</strong> — TLS certificate in <code>us-east-1</code> for CloudFront</li>
+      <li><strong>GitHub Actions</strong> — sync <code>aws s3 sync</code> and <code>cloudfront create-invalidation</code></li>
+    </ul>
+
+    <h2>Deployment flow</h2>
+    <pre>git push → Actions checkout → sync to S3 → invalidate CloudFront cache</pre>
+    <p>Invalidation keeps visitors from seeing stale HTML or assets after a deploy. For a portfolio, invalidating <code>/*</code> is simple; larger sites often target specific paths.</p>
+
+    <h2>Key decisions</h2>
+    <ul>
+      <li>Block all public S3 access; CloudFront is the only read path</li>
+      <li>Versioned bucket optional for rollback; lifecycle rules control cost</li>
+      <li>Cache-Control headers on upload for long-lived static assets</li>
+    </ul>
+
+    <h2>Outcomes</h2>
+    <p>Low operational overhead, predictable cost, and a deploy pipeline that matches how the site is actually built — static files only.</p>
+  </article>
+
+  <div class="doc-footer-links">
+    <a href="https://github.com/lehibonafe" target="_blank" rel="noopener" class="btn">GitHub</a>
+    <a href="https://dev.to/lehibonafe/deploying-a-static-website-on-aws-s3-with-cloudfront-route53-and-github-actions-4463" target="_blank" rel="noopener" class="btn">Original article</a>
+  </div>
+</main>
+
+<script src="../script.js"></script>
+</body>
+</html>
