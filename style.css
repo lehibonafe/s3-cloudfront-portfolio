@@ -184,6 +184,17 @@
   .hero-ctas img {
     width: 20px;
   }
+  .visitor-counter{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 15px;
+    color: var(--text);
+    margin-left: auto;
+  }
+  .visitor-counter i{
+    font-size: 20px;
+  }
   .btn-primary img{
     filter: brightness(0) invert(1);
   }
