@@ -646,23 +646,8 @@
   }
   .footer-inner{
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 12px;
-  }
-  .footer-social{
-    display: flex;
-    gap: 16px;
-  }
-  .footer-social a{
-    font-size: 11px;
-    color: var(--text-soft);
-    font-family: 'JetBrains Mono', ui-monospace, monospace;
-    font-weight: 500;
-    transition: color .15s;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
+  justify-content: center;
+  align-items: center;;
   }
   .footer-social a:hover{ color: var(--accent); }
   .copy{
