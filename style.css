@@ -758,6 +758,15 @@
     padding-top: 0;
     border-top: none;
   }
+   .website-link {
+    font-family: 'Saira', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    color: var(--text);
+    margin: 28px 0 12px;
+    text-transform: lowercase !important;
+  }
   .doc-content h2{
     font-family: 'Saira', sans-serif;
     font-size: 13px;
@@ -767,6 +776,8 @@
     color: var(--text);
     margin: 28px 0 12px;
   }
+  
+  
   .doc-content h2:first-child{ margin-top: 0; }
   .doc-content p,
   .doc-content li{

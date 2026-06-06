@@ -26,23 +26,29 @@
 <main class="container doc-main reveal">
   <span class="project-index">01</span>
   <h1 class="doc-title">S3 Static Website with CloudFront</h1>
+  
   <p class="doc-lead">Deployed a static portfolio on AWS with S3 and CloudFront for global delivery, Route 53 for DNS, and GitHub Actions for automated CI/CD on every push.</p>
+
   <div class="project-tags">
-    <span>S3</span><span>CloudFront</span><span>Route 53</span><span>Actions</span>
+    <span>S3</span><span>CloudFront</span><span>Route 53</span><span>GitHub Actions</span>
   </div>
+
 
   <article class="doc-content">
     <h2>Overview</h2>
     <p>This project hosts a fully static site on AWS with no application servers. Assets live in S3, CloudFront caches and serves them at the edge, and GitHub Actions builds and deploys on merge to main.</p>
-
+    <h2>Visit </h2>
     <h2>Architecture</h2>
     <ul>
       <li><strong>S3</strong> — private bucket; objects served only via CloudFront OAI/OAC</li>
       <li><strong>CloudFront</strong> — HTTPS, compression, custom error pages for SPA-style routing if needed</li>
+      <li><strong>DynamoDB</strong> — serverless database, count number of visits</li>
       <li><strong>Route 53</strong> — alias record pointing the domain to the CloudFront distribution</li>
       <li><strong>ACM</strong> — TLS certificate in <code>us-east-1</code> for CloudFront</li>
       <li><strong>GitHub Actions</strong> — sync <code>aws s3 sync</code> and <code>cloudfront create-invalidation</code></li>
+      
     </ul>
+    <img src="../images/s3-website-architecture.png" alt="">  
 
     <h2>Deployment flow</h2>
     <pre>git push → Actions checkout → sync to S3 → invalidate CloudFront cache</pre>
@@ -57,11 +63,12 @@
 
     <h2>Outcomes</h2>
     <p>Low operational overhead, predictable cost, and a deploy pipeline that matches how the site is actually built — static files only.</p>
+  <h2 class="website-link"><i class="bi bi-link-45deg"></i>  <a href="https://cloud-lehi.com" target="_blank" rel="noopener">https://cloud-lehi.com</a></h2>
+
   </article>
 
   <div class="doc-footer-links">
-    <a href="https://github.com/lehibonafe" target="_blank" rel="noopener" class="btn">GitHub</a>
-    <a href="https://dev.to/lehibonafe/deploying-a-static-website-on-aws-s3-with-cloudfront-route53-and-github-actions-4463" target="_blank" rel="noopener" class="btn">Original article</a>
+    <a href="https://github.com/lehibonafe/s3-cloudfront-portfolio" target="_blank" rel="noopener" class="btn"><i class="bi bi-github" aria-hidden="true"></i>GitHub</a>
   </div>
 </main>
 
