@@ -37,7 +37,7 @@
   body{
     background: var(--bg);
     color: var(--text);
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', sans-serif;
+    font-family: 'Rubik', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', sans-serif;
     font-size: 15px;
     line-height: 1.55;
     -webkit-font-smoothing: antialiased;
@@ -77,14 +77,14 @@
     transition: background-color .25s, border-color .25s;
   }
   .theme-toggle button{
-    width: 24px; height: 22px;
+    width: 28px; height: 25px;
     background: transparent;
     border: none;
-    border-radius: 18px;
+    border-radius: 20px;
     cursor: pointer;
     color: var(--text-muted);
     display: flex; align-items: center; justify-content: center;
-    font-size: 11px;
+    font-size: 14px;
     transition: all .15s;
   }
   .theme-toggle button.active{
@@ -171,7 +171,6 @@
   }
   .role{
     font-size: 16px;
-    font-family: 'JetBrains Mono', ui-monospace, monospace;
     margin-top: 15px;
     font-weight: 600;
   }
@@ -207,7 +206,6 @@
     padding: 8px 18px;
     font-size: 11px;
     font-weight: 700;
-    font-family: 'Saira', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', sans-serif;
     text-transform: uppercase;
     letter-spacing: 0.12em;
     transition: all .15s;
@@ -247,7 +245,6 @@
     padding-bottom: 0;
   }
   .section-heading h2{
-    font-family: 'Saira', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', sans-serif;
     font-size: 16px;
     font-weight: 700;
     letter-spacing: 0.15em;
@@ -305,10 +302,9 @@
   .stack-group{ margin-bottom: 18px; }
   .stack-group:last-child{ margin-bottom: 0; }
   .stack-group h3{
-    font-size: 13px;
+    font-size: 14px;
     margin-bottom: 2px;
     font-weight: 600;
-    font-family: 'JetBrains Mono', ui-monospace, monospace;
   }
   .stack-tags{
     display: flex;
@@ -317,7 +313,7 @@
     
   }
   .stack-tags span{
-    font-size: 12.5px;
+    font-size: 13px;
     color: var(--text);
     padding: 2px 20px 0 0;
     transition: all .15s;
@@ -392,7 +388,6 @@
   }
   .tl-text{ flex: 1; min-width: 0; }
   .tl-role{
-    font-family: 'Saira', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', sans-serif;
     font-size: 15px;
     font-weight: 600;
     color: var(--text);
@@ -502,7 +497,6 @@
     margin-bottom: 12px;
   }
   .project-name{
-    font-family: 'Saira', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', sans-serif;
     font-size: 14px;
     font-weight: 700;
     color: var(--text);
@@ -524,7 +518,6 @@
     gap: 6px;
     margin-top: auto;
     padding-top: 4px;
-    border-top: 1px solid var(--border-soft);
   }
   .project-tags span{
     font-size: 10px;
@@ -556,7 +549,6 @@
   }
   .event-item {
     display: none;
-    animation: fadeSlide .35s ease;
   }
   .event-item.active { display: block; }
   @keyframes fadeSlide {
@@ -576,7 +568,6 @@
     margin-bottom: 12px;
   }
   .event-name {
-    font-family: 'Saira', sans-serif;
     font-size: 13px;
     font-weight: 700;
     color: var(--text);
@@ -655,23 +646,8 @@
   }
   .footer-inner{
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 12px;
-  }
-  .footer-social{
-    display: flex;
-    gap: 16px;
-  }
-  .footer-social a{
-    font-size: 11px;
-    color: var(--text-soft);
-    font-family: 'JetBrains Mono', ui-monospace, monospace;
-    font-weight: 500;
-    transition: color .15s;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
+  justify-content: center;
+  align-items: center;;
   }
   .footer-social a:hover{ color: var(--accent); }
   .copy{
