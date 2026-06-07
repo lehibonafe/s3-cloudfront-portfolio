@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
 <head>
@@ -308,3 +309,315 @@
 
 </body>
 </html>
+=======
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Lehi Bonafe — Cloud & DevOps Engineer building resilient, scalable, automated systems on AWS." />
+<title>Lehi Bonafe</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===== NAV REMOVED — theme toggle moved to hero ===== -->
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-row">
+      <div class="avatar">
+        <img src="./images/avatar.jpg" alt="Lehi Bonafe">
+      </div>
+
+      <div class="hero-info">
+        <div class="hero-info-top">
+          <div class="hero-info-text">
+            <h1 class="name">Lehi Bonafe</h1>
+            <div class="location"><i class="bi bi-geo-alt"></i>Angeles City, Philippines</div>
+            <div class="role">Cloud<span class="sep">x</span>DevOps</div>
+          </div>
+
+          <div class="theme-toggle" role="group" aria-label="Theme">
+            <button type="button" data-theme-btn="light" class="active" title="Light theme">☀</button>
+            <button type="button" data-theme-btn="dark" title="Dark theme">☾</button>
+          </div>
+        </div>
+
+        <div class="hero-ctas">
+          <a href="https://www.linkedin.com/in/lehi-bonafe/" target="_blank" rel="noopener" class="btn btn-primary">
+            <img src="./images/linkedin-svgrepo-com.svg" alt="">Connect
+          </a>
+          <a href="mailto:lehivelardebonafe@gmail.com" class="btn">
+            <span class="ico">✉</span> Email
+          </a>
+          <a href="LehiBonafe-Resume.pdf" target="_blank" rel="noopener" class="btn">
+            <i class="bi bi-cloud-arrow-down-fill"></i>RESUME
+          </a>
+          <div class="visitor-counter">
+            <i class="bi bi-eye-fill"></i>
+            <span id="visitor-count">0</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TWO-COLUMN ===== -->
+<div class="container">
+  <div class="two-col">
+
+    <!-- LEFT: About + Stack -->
+    <div>
+      <section id="about" class="about-section reveal">
+        <div class="section-heading">
+          <h2>About</h2>
+        </div>
+        <div class="about-text">
+          <p>I'm currently a Jr. Site Reliability Engineer focused on monitoring and building reliable, scalable, and automated systems. I enjoy working with cloud technologies, CI/CD pipelines, containerization, and infrastructure as code. </p>
+          <p>Through hands-on projects, I've gained experience with AWS, Linux, Docker, and Automation tools. I'm continuously learning and improving my skills to deliver resilient applications and efficient infrastructure.</p>
+        </div>
+      </section>
+
+      <section id="stack" class="stack-section reveal">
+        <div class="section-heading">
+          <h2>Tech Stack</h2>
+        </div>
+
+        <div class="stack-group">
+          <h3>DevOps & Cloud</h3>
+          <div class="stack-tags">
+            <span>AWS</span><span>Docker</span><span>GitHub Actions</span><span>Terraform</span><span>Git</span><span>Linux</span><span>Grafana</span>
+          </div>
+        </div>
+
+        <div class="stack-group">
+          <h3>Frontend</h3>
+          <div class="stack-tags">
+            <span>HTML</span><span>CSS</span><span>JavaScript</span><span>React</span>
+          </div>
+        </div>
+
+        <div class="stack-group">
+          <h3>Backend</h3>
+          <div class="stack-tags">
+            <span>MySQL</span><span>Node.js</span><span>Python</span>
+          </div>
+        </div>
+
+        <div class="stack-group">
+          <h3>LLM</h3>
+          <div class="stack-tags">
+            <span>OpenAI</span><span>Claude</span><span>Gemini</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="projects-section reveal">
+        <div class="section-heading">
+          <h2>Recent Projects</h2>
+          <a href="https://github.com/lehibonafe" target="_blank" rel="noopener" class="view-all">view all →</a>
+        </div>
+        <div class="projects-grid">
+          <a href="projects/s3-static-website.html" class="project-card">
+            <div class="project-card-body">
+              <span class="project-index">01</span>
+              <h3 class="project-name">S3 Static Website with CloudFront</h3>
+              <p class="project-desc">Deployed a static portfolio on AWS with S3 + CloudFront for global delivery and GitHub Actions CI/CD.</p>
+              <div class="project-tags">
+                <span>S3</span><span>CloudFront</span><span>Route 53</span><span>Actions</span>
+              </div>
+            </div>
+            <div class="project-card-media">
+              <img src="./images/s3-website-architecture.png" alt="S3 Static Website with CloudFront">
+            </div>
+          </a>
+
+          <a href="projects/cicd-fargate.html" class="project-card">
+            <div class="project-card-body">
+              <span class="project-index">02</span>
+              <h3 class="project-name">CI/CD Pipeline for Fargate</h3>
+              <p class="project-desc">End-to-end pipeline for containerized workloads — Docker → ECR → ECS rolling deploy, all from a git push.</p>
+              <div class="project-tags">
+                <span>Docker</span><span>ECR</span><span>ECS</span><span>Fargate</span>
+              </div>
+            </div>
+            <div class="project-card-media">
+              <img src="./images/cicd-github-actions-fargate.png" alt="CI/CD Pipeline for Fargate">
+            </div>
+          </a>
+
+          <a href="projects/github-actions-oidc.html" class="project-card">
+            <div class="project-card-body">
+              <span class="project-index">03</span>
+              <h3 class="project-name">GitHub Actions × AWS via OIDC</h3>
+              <p class="project-desc">Replaced long-lived AWS keys with short-lived OIDC tokens and IAM role assumption — eliminating credential rotation.</p>
+              <div class="project-tags">
+                <span>OIDC</span><span>IAM</span><span>Actions</span><span>Security</span>
+              </div>
+            </div>
+            <div class="project-card-media">
+              <img src="./images/github-actions-oidc.png" alt="GitHub Actions × AWS via OIDC">
+            </div>
+          </a>
+
+
+          <a href="projects/terraform-state.html" class="project-card">
+            <div class="project-card-body">
+              <span class="project-index">04</span>
+              <h3 class="project-name">Terraform State Management</h3>
+              <p class="project-desc">Remote backend strategy with S3 + DynamoDB locking — teams collaborate on infrastructure without conflicts.</p>
+              <div class="project-tags">
+                <span>Terraform</span><span>S3</span><span>DynamoDB</span><span>IaC</span>
+              </div>
+            </div>
+            <div class="project-card-media">
+              <img src="./images/terraform-statefile-management.png" alt="Terraform State Management">
+            </div>
+          </a>
+        </div>
+      </section>
+    </div>
+
+    <!-- RIGHT: Experience + Cert logos -->
+    <div>
+      <section id="experience" class="reveal">
+        <div class="section-heading">
+          <h2>Experience</h2>
+        </div>
+
+        <ul class="timeline">
+          <li class="tl-row">
+            <div class="tl-marker"></div>
+            <div class="tl-content">
+              <div class="tl-text">
+                <div class="tl-role">Site Reliability Engineer</div>
+                <div class="tl-org">eTap Inc.</div>
+              </div>
+              <div class="tl-year">2026</div>
+            </div>
+          </li>
+          <li class="tl-row">
+            <div class="tl-marker"></div>
+            <div class="tl-content">
+              <div class="tl-text">
+                <div class="tl-role">IT Analyst</div>
+                <div class="tl-org">CGIC</div>
+              </div>
+              <div class="tl-year">2024</div>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <section id="certs-logos" class="reveal">
+        <div class="section-heading">
+          <h2>Certifications</h2>
+          <a href="https://www.credly.com/users/lehi-bonafe" target="_blank" rel="noopener" class="view-all">credly →</a>
+        </div>
+
+        <div class="cert-logos">
+          <a href="https://www.credly.com/badges/afa42e10-0896-4556-8690-b2b6e2a087c6/public_url" target="_blank" rel="noopener" class="cert-logo" title="AWS Solutions Architect — Associate">
+            <img src="./images/aws-solarc.png" alt="AWS Solutions Architect Associate">
+          </a>
+
+          <a href="https://www.credly.com/badges/bb32d38b-605e-4065-bf42-3457ad77d2e8/public_url" target="_blank" rel="noopener" class="cert-logo" title="AWS Developer — Associate">
+            <img src="./images/aws-developer.png" alt="AWS Developer Associate">
+          </a>
+
+        </div>
+      </section>
+
+      <!-- Social Links -->
+      <section id="published" class="reveal">
+        <div class="section-heading">
+          <h2>Social Links</h2>
+        </div>
+
+        <div class="published-icons">
+          <a href="https://github.com/lehibonafe" target="_blank" rel="noopener" class="published-icon" aria-label="GitHub" title="GitHub">
+            <i class="bi bi-github" aria-hidden="true"></i>
+          </a>
+          <a href="https://medium.com/@lehivelardebonafe" target="_blank" rel="noopener" class="published-icon" aria-label="Medium" title="Medium">
+            <i class="bi bi-medium" aria-hidden="true"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/lehi-bonafe/" target="_blank" rel="noopener" class="published-icon" aria-label="LinkedIn" title="LinkedIn">
+            <i class="bi bi-linkedin" aria-hidden="true"></i>
+          </a>
+        </div>
+      </section>
+
+      <!-- Events slider -->
+      <section id="events" class="reveal">
+        <div class="section-heading">
+          <h2>ARTIFACTS</h2>
+        </div>
+
+        <div class="events-slider">
+          <div class="events-slides">
+
+            <div class="event-item active">
+              <p class="event-quote">"An incredible hands-on experience exploring the latest in cloud infrastructure, DevOps tooling, and platform engineering."</p>
+              <hr class="event-divider">
+              <div class="event-meta">
+                <div class="event-name">AWS Summit Manila 2024</div>
+                <div class="event-detail">Cloud Conference · Manila, PH</div>
+              </div>
+            </div>
+
+            <div class="event-item">
+              <p class="event-quote">"A deep dive into Kubernetes, GitOps, and container orchestration with practitioners from across Southeast Asia."</p>
+              <hr class="event-divider">
+              <div class="event-meta">
+                <div class="event-name">KubeCon SEA 2024</div>
+                <div class="event-detail">Container Conference · Singapore</div>
+              </div>
+            </div>
+
+            <div class="event-item">
+              <p class="event-quote">"Workshops on Terraform, CI/CD pipelines, and infrastructure automation — practical sessions with real-world use cases."</p>
+              <hr class="event-divider">
+              <div class="event-meta">
+                <div class="event-name">HashiConf 2023</div>
+                <div class="event-detail">Infrastructure Conference · Online</div>
+              </div>
+            </div>
+
+            <div class="event-item">
+              <p class="event-quote">"Engaging talks on observability, SRE practices, and building resilient systems at scale."</p>
+              <hr class="event-divider">
+              <div class="event-meta">
+                <div class="event-name">DevOps Days Manila 2023</div>
+                <div class="event-detail">DevOps Meetup · Manila, PH</div>
+              </div>
+            </div>
+
+          </div>
+          <div class="events-dots" role="tablist" aria-label="Event slides"></div>
+        </div>
+      </section>
+
+    </div>
+
+  </div>
+</div>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="container footer-inner">
+    <div class="copy">© LEHI BONAFE 2026 — ALL RIGHTS RESERVED</div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+>>>>>>> 68be5c7f61feb20aea90a7703251485304ad7985
