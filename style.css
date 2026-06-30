@@ -45,7 +45,8 @@ html {
 body {
     background: var(--bg);
     color: var(--text);
-    font-family: "Pliant", sans-serif;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
     font-size: 15px;
     line-height: 1.55;
     -webkit-font-smoothing: antialiased;
@@ -146,15 +147,7 @@ body::before {
     align-items: center;
     justify-content: center;
     color: white;
-    font-family:
-        "Saira",
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        "Roboto",
-        "Oxygen",
-        "Ubuntu",
-        sans-serif;
+    font-family: "Inter", sans-serif;
     font-weight: 700;
     font-size: 54px;
     letter-spacing: 0.04em;
@@ -201,15 +194,7 @@ body::before {
     min-width: 0;
 }
 h1.name {
-    font-family:
-        "Saira",
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        "Roboto",
-        "Oxygen",
-        "Ubuntu",
-        sans-serif;
+    font-family: "Inter", sans-serif;
     font-size: 38px;
     font-weight: 700;
     letter-spacing: 0.02em;
@@ -230,7 +215,7 @@ h1.name em {
     display: flex;
     align-items: center;
     gap: 8px;
-    font-family: "Pliant", sans-serif;
+    font-family: "Inter", sans-serif;
     letter-spacing: 0.08em;
 }
 .role {
@@ -327,7 +312,7 @@ h1.name em {
     font-size: 10.5px;
     font-weight: 500;
     color: var(--text-soft);
-    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-family: "Inter", sans-serif;
     transition: color 0.15s;
     text-transform: uppercase;
     letter-spacing: 0.08em;
@@ -491,7 +476,7 @@ h1.name em {
     color: var(--text-muted);
     flex-shrink: 0;
     padding-top: 4px;
-    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-family: "Inter", sans-serif;
     font-weight: 500;
 }
 
@@ -578,7 +563,7 @@ h1.name em {
 }
 .project-index {
     display: block;
-    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-family: "Inter", sans-serif;
     font-size: 11px;
     font-weight: 500;
     letter-spacing: 0.12em;
@@ -612,7 +597,7 @@ h1.name em {
     font-size: 10px;
     font-weight: 500;
     color: var(--text-soft);
-    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-family: "Inter", sans-serif;
     text-transform: uppercase;
     letter-spacing: 0.08em;
     padding: 4px 9px;
@@ -675,7 +660,7 @@ h1.name em {
 .event-detail {
     font-size: 11.5px;
     color: var(--text-soft);
-    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-family: "Inter", sans-serif;
 }
 .events-dots {
     display: flex;
@@ -756,7 +741,7 @@ footer {
 .copy {
     font-size: 11px;
     color: var(--text-muted);
-    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-family: "Inter", sans-serif;
     text-transform: uppercase;
     letter-spacing: 0.1em;
 }
@@ -833,7 +818,7 @@ footer {
     gap: 16px;
 }
 .doc-back {
-    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-family: "Inter", sans-serif;
     font-size: 11px;
     font-weight: 500;
     text-transform: uppercase;
@@ -852,7 +837,7 @@ footer {
     margin-bottom: 10px;
 }
 .doc-title {
-    font-family: "Saira", sans-serif;
+    font-family: "Inter", sans-serif;
     font-size: 28px;
     font-weight: 700;
     letter-spacing: 0.04em;
@@ -873,7 +858,7 @@ footer {
     border-top: none;
 }
 .website-link {
-    font-family: "Saira", sans-serif;
+    font-family: "Inter", sans-serif;
     font-size: 15px;
     font-weight: 700;
     letter-spacing: 0.14em;
@@ -882,7 +867,7 @@ footer {
     text-transform: lowercase !important;
 }
 .doc-content h2 {
-    font-family: "Saira", sans-serif;
+    font-family: "Inter", sans-serif;
     font-size: 13px;
     font-weight: 700;
     letter-spacing: 0.14em;
@@ -920,7 +905,7 @@ footer {
     color: var(--text-muted);
 }
 .doc-content code {
-    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-family: "Inter", sans-serif;
     font-size: 12px;
     padding: 2px 6px;
     background: var(--bg-soft);
@@ -928,7 +913,7 @@ footer {
     color: var(--text);
 }
 .doc-content pre {
-    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-family: "Inter", sans-serif;
     font-size: 12px;
     line-height: 1.55;
     padding: 16px;
