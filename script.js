@@ -58,7 +58,7 @@ if (slides.length && dotsWrap) {
 
   function resetTimer() {
     clearInterval(timer);
-    timer = setInterval(() => goTo(current + 1), 5000);
+    timer = setInterval(() => goTo(current + 1), 8000);
   }
 
   resetTimer();

@@ -80,7 +80,7 @@ body::before {
 }
 
 .container {
-    max-width: 960px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 0 28px;
     position: relative;
@@ -244,9 +244,32 @@ h1.name em {
     font-size: 15px;
     color: var(--text);
     margin-left: auto;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    cursor: pointer;
 }
+
+.visitor-counter:hover {
+    background: var(--card);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
 .visitor-counter i {
     font-size: 20px;
+    color: var(--accent);
+    transition: transform 0.3s ease;
+}
+
+.visitor-counter:hover i {
+    transform: scale(1.1);
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1.1); }
+    50% { transform: scale(1.2); }
 }
 .btn-primary img {
     filter: brightness(0) invert(1);
@@ -260,10 +283,44 @@ h1.name em {
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.12em;
-    transition: all 0.15s;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     border: 1px solid var(--border);
     background: var(--card);
     color: var(--text);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.btn:hover::before {
+    left: 100%;
+}
+
+.btn:hover {
+    transform: translateY(-3px) scale(1.02);
+    border-color: var(--accent);
+    color: var(--accent);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.btn:hover .ico {
+    transform: scale(1.2) rotate(5deg);
+    transition: transform 0.3s ease;
+}
+
+.btn:active {
+    transform: translateY(-1px) scale(0.98);
+    transition: transform 0.1s ease;
 }
 [data-theme="dark"] .btn {
     border-color: #2a2a2a;
@@ -276,10 +333,22 @@ h1.name em {
     background: var(--text);
     color: var(--bg);
     border-color: var(--text);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
+
+.btn-primary::before {
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+}
+
 .btn-primary:hover {
     color: var(--bg);
-    opacity: 0.88;
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    border-color: var(--text);
+}
+
+.btn-primary:active {
+    transform: translateY(-2px) scale(1.02);
 }
 .btn-primary .ico {
     opacity: 1;
@@ -329,6 +398,7 @@ h1.name em {
     padding-top: 15px;
     padding-bottom: 35px;
     border: 1px solid var(--border);
+    border-radius: 5px;
 }
 .about-text p {
     font-size: 14px;
@@ -359,6 +429,7 @@ h1.name em {
     padding-top: 15px;
     padding-bottom: 35px;
     border: 1px solid var(--border);
+    border-radius: 5px;
 }
 .stack-group {
     margin-bottom: 18px;
@@ -485,7 +556,7 @@ h1.name em {
     padding: 20px;
     padding-top: 15px;
     padding-bottom: 24px;
-    margin-top: 5px;
+    margin-top: 55px;
     margin-bottom: 35px;
 }
 .cert-logos {
@@ -531,6 +602,7 @@ h1.name em {
     overflow: hidden;
     background: var(--card);
     border: 1px solid var(--border);
+    border-radius: 5px;
     transition:
         transform 0.2s ease,
         border-color 0.2s ease,
@@ -686,6 +758,7 @@ h1.name em {
     margin-bottom: 35px;
     padding: 20px;
     padding-top: 15px;
+    margin-top: 60px;
 }
 #artifacts .section-heading,
 #published .section-heading {
@@ -706,17 +779,70 @@ h1.name em {
     background: var(--card);
     color: var(--text);
     font-size: 20px;
-    transition:
-        border-color 0.15s,
-        color 0.15s,
-        background-color 0.15s,
-        transform 0.15s;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.published-icon::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: radial-gradient(circle, var(--accent) 0%, transparent 70%);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    opacity: 0;
+    z-index: 0;
+}
+
+.published-icon i {
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
 .published-icon:hover {
     border-color: var(--accent);
-    color: var(--accent);
-    background: var(--card-hover);
-    transform: translateY(-2px);
+    color: white;
+    background: var(--accent);
+    transform: translateY(-5px) scale(1.1) rotate(5deg);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.published-icon:hover::before {
+    width: 60px;
+    height: 60px;
+    opacity: 0.3;
+}
+
+.published-icon:hover i {
+    transform: scale(1.2);
+}
+
+.published-icon:active {
+    transform: translateY(-2px) scale(1.05) rotate(2deg);
+    transition: transform 0.1s ease;
+}
+
+/* Specific hover colors for each social platform */
+.published-icon[href*="github"]:hover {
+    background: #333;
+    border-color: #333;
+}
+
+.published-icon[href*="medium"]:hover {
+    background: #00ab6c;
+    border-color: #00ab6c;
+}
+
+.published-icon[href*="linkedin"]:hover {
+    background: #0077b5;
+    border-color: #0077b5;
 }
 [data-theme="dark"] .published-icon {
     border-color: #2a2a2a;
