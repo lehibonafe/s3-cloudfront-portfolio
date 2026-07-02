@@ -100,33 +100,109 @@ body::before {
     display: inline-flex;
     align-items: center;
     background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 20px;
-    gap: 0;
-    transition:
-        background-color 0.25s,
-        border-color 0.25s;
+    border: 2px solid var(--border);
+    border-radius: 8px;
+    padding: 2px;
+    gap: 2px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.theme-toggle:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-color: var(--accent);
+}
+
+.theme-toggle::before {
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 24px;
+    height: 24px;
+    background: linear-gradient(135deg, var(--accent), var(--accent));
+    border-radius: 4px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+[data-theme="light"] .theme-toggle::before {
+    transform: translateX(0);
+    background: linear-gradient(135deg, #fbbf24, #f59e0b);
+}
+
+[data-theme="dark"] .theme-toggle::before {
+    transform: translateX(28px);
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+}
+
 .theme-toggle button {
     width: 28px;
-    height: 25px;
+    height: 28px;
     background: transparent;
     border: none;
-    border-radius: 20px;
+    border-radius: 4px;
     cursor: pointer;
     color: var(--text-muted);
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 14px;
-    transition: all 0.15s;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    z-index: 2;
 }
+
 .theme-toggle button.active {
-    background: var(--text);
-    color: var(--bg);
+    color: white;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
 }
+
 .theme-toggle button:hover:not(.active) {
-    color: var(--text);
+    color: var(--accent);
+    transform: scale(1.02);
+}
+
+.theme-toggle button:active {
+    transform: scale(0.98);
+}
+
+/* Enhanced icons with rotation animation */
+.theme-toggle button[data-theme-btn="light"] {
+    transition: all 0.3s ease, transform 0.3s ease;
+}
+
+.theme-toggle button[data-theme-btn="dark"] {
+    transition: all 0.3s ease, transform 0.3s ease;
+}
+
+[data-theme="light"] .theme-toggle button[data-theme-btn="light"] {
+    animation: sunRotate 15s linear infinite;
+}
+
+[data-theme="dark"] .theme-toggle button[data-theme-btn="dark"] {
+    animation: moonGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes sunRotate {
+    0% { transform: rotate(0deg) scale(1.05); }
+    100% { transform: rotate(360deg) scale(1.05); }
+}
+
+@keyframes moonGlow {
+    0% { 
+        transform: scale(1.05);
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    }
+    100% { 
+        transform: scale(1.05);
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 0 6px rgba(255, 255, 255, 0.2);
+    }
 }
 
 /* ===== HERO ===== */
