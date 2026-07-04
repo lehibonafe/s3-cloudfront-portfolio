@@ -923,6 +923,10 @@ h1.name em {
     background: #0077b5;
     border-color: #0077b5;
 }
+.published-icon[href*="youtube"]:hover {
+    background: #0077b5;
+    border-color: #FF0000;
+}
 [data-theme="dark"] .published-icon {
     border-color: #2a2a2a;
     background: #0f0f0f;
