@@ -313,6 +313,9 @@ h1.name em {
 .hero-ctas img {
     width: 20px;
 }
+.hero-ctas .bi {
+    font-size: 16px;
+}
 .visitor-counter {
     display: flex;
     align-items: center;
