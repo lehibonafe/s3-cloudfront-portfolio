@@ -430,14 +430,14 @@ h1.name em {
     display: inline-flex;
     align-items: center;
     gap: 7px;
-    padding: 7px 16px;
+    padding: 6px 14px;
     font-size: 11px;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.12em;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     border: 1px solid var(--border);
-    border-radius: var(--radius-pill);
+    border-radius: 10px;
     background: var(--card);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
@@ -1021,8 +1021,8 @@ h1.name em {
     justify-content: flex-start;
     gap: 12px;
     width: fit-content;
-    height: 44px;
-    padding: 0 16px;
+    height: 40px;
+    padding: 0 14px;
     border: 1px solid var(--border);
     background: var(--bg);
     color: var(--text);
