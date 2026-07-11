@@ -16,8 +16,7 @@ const buttons = document.querySelectorAll('[data-theme-btn]');
 const stored = (() => {
   try { return localStorage.getItem('theme'); } catch (e) { return null; }
 })();
-const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-const initial = stored || (prefersDark ? 'dark' : 'light');
+const initial = stored || 'light';
 applyTheme(initial);
 
 buttons.forEach((b) => {
