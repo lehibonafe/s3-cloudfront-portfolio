@@ -1060,53 +1060,21 @@ h1.name em {
 }
 
 .published-icon:hover {
+    transform: translateY(-3px) scale(1.02);
     border-color: var(--accent);
-    color: white;
-    background: var(--accent);
-    transform: translateY(-5px) scale(1.1) rotate(5deg);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    color: var(--accent);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
-.published-icon:hover::before {
-    width: 60px;
-    height: 60px;
-    opacity: 0.3;
-}
-
-.published-icon:hover i {
-    transform: scale(1.2);
-}
-
-.published-icon:active {
-    transform: translateY(-2px) scale(1.05) rotate(2deg);
-    transition: transform 0.1s ease;
-}
-
-/* Specific hover colors for each social platform */
-.published-icon[href*="github"]:hover {
-    background: #333;
-    border-color: #333;
-}
-
-.published-icon[href*="medium"]:hover {
-    background: #00ab6c;
-    border-color: #00ab6c;
-}
-
-.published-icon[href*="linkedin"]:hover {
-    background: #0077b5;
-    border-color: #0077b5;
-}
-.published-icon[href*="youtube"]:hover {
-    background: #0077b5;
-    border-color: #FF0000;
-}
 [data-theme="dark"] .published-icon {
     border-color: #2a2a2a;
     background: var(--card-hover);
 }
 [data-theme="dark"] .published-icon:hover {
-    background: #1a1a1a;
+    transform: translateY(-3px) scale(1.02);
+    border-color: var(--accent-soft);
+    color: var(--accent);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
 /* ===== FOOTER ===== */
