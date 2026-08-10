@@ -176,19 +176,13 @@ body::after {
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.theme-toggle:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    border-color: var(--accent);
-}
-
 .theme-toggle::before {
     content: '';
     position: absolute;
     top: 4px;
     left: 4px;
-    width: 24px;
-    height: 24px;
+    width: 20px;
+    height: 20px;
     background: linear-gradient(135deg, var(--accent), var(--accent));
     border-radius: 50%;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -207,8 +201,8 @@ body::after {
 }
 
 .theme-toggle button {
-    width: 28px;
-    height: 28px;
+    width: 25px;
+    height: 25px;
     background: transparent;
     border: none;
     border-radius: 50%;
@@ -273,12 +267,12 @@ body::after {
 
 /* ===== HERO ===== */
 .hero {
-    padding: 28px 0 30px;
+    padding: 18px 0 19px;
 }
 .hero-row {
     display: grid;
-    grid-template-columns: 180px 1fr;
-    gap: 10px;
+    grid-template-columns: 168px minmax(250px, 1fr) minmax(330px, 1.45fr);
+    gap: 18px;
     align-items: flex-start;
 }
 .avatar {
@@ -333,6 +327,49 @@ body::after {
     justify-content: space-between;
     gap: 16px;
     margin-bottom: 14px;
+}
+.hero-side {
+    min-width: 0;
+}
+.hero-github {
+    min-width: 0;
+}
+.hero-controls {
+    min-height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+.contribution-calendar {
+    display: block;
+    min-width: 0;
+    padding: 9px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    color: #0f0f0f;
+    background: #ffffff;
+    border: 1px solid #e5e5e5;
+    border-radius: var(--radius-md);
+    box-shadow: 0 1px 2px rgba(15, 15, 15, 0.06);
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contribution-title {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin-bottom: 4px;
+    color: #4a4a4a;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+.contribution-calendar img {
+    width: 100%;
+    height: auto;
 }
 .hero-info-text {
     flex: 1;
@@ -393,30 +430,20 @@ h1.name em {
     display: flex;
     align-items: center;
     gap: 6px;
-    font-size: 15px;
+    font-size: 13px;
     color: var(--text);
-    margin-left: auto;
-    padding: 6px 12px;
+    padding: 5px 8px;
     border-radius: 8px;
     transition: all 0.3s ease;
     cursor: pointer;
 }
 
-.visitor-counter:hover {
-    background: var(--card);
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
+
 
 .visitor-counter i {
     font-size: 20px;
     color: var(--accent);
     transition: transform 0.3s ease;
-}
-
-.visitor-counter:hover i {
-    transform: scale(1.1);
-    animation: pulse 1.5s infinite;
 }
 
 @keyframes pulse {
@@ -1297,6 +1324,12 @@ footer {
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 800px) {
+    .hero-row {
+        grid-template-columns: 168px 1fr;
+    }
+    .hero-side {
+        grid-column: 1 / -1;
+    }
     .page-grid {
         grid-template-columns: 1fr;
         grid-template-rows: none;
@@ -1323,6 +1356,17 @@ footer {
     }
     .hero-info-top {
         flex-wrap: wrap;
+    }
+    .hero-side {
+        grid-column: auto;
+    }
+    .hero-controls {
+        justify-content: space-between;
+    }
+    .contribution-calendar img {
+        min-width: 560px;
+        object-fit: contain;
+        object-position: left center;
     }
     .avatar {
         width: 100%;
