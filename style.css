@@ -346,9 +346,10 @@ body::after {
     width: 28px;
     height: 28px;
     margin-right: auto;
+    display: block;
     object-fit: cover;
     border-radius: 6px;
-    flex: 0 0 auto;
+    flex: 0 0 28px;
 }
 .contribution-calendar {
     display: block;
