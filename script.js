@@ -16,7 +16,7 @@ const buttons = document.querySelectorAll('[data-theme-btn]');
 const stored = (() => {
   try { return localStorage.getItem('theme'); } catch (e) { return null; }
 })();
-const initial = stored || 'dark';
+const initial = stored || 'light';
 applyTheme(initial);
 
 buttons.forEach((b) => {
