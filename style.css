@@ -342,6 +342,14 @@ body::after {
     gap: 12px;
     margin-bottom: 20px;
 }
+.visitor-gif {
+    width: 28px;
+    height: 28px;
+    margin-right: auto;
+    object-fit: cover;
+    border-radius: 6px;
+    flex: 0 0 auto;
+}
 .contribution-calendar {
     display: block;
     min-width: 0;
@@ -426,6 +434,10 @@ h1.name em {
 .hero-ctas .bi {
     font-size: 16px;
 }
+.pentol-gif {
+    width: 1px;
+    height: 1px;
+}
 .visitor-counter {
     display: flex;
     align-items: center;
@@ -437,8 +449,6 @@ h1.name em {
     transition: all 0.3s ease;
     cursor: pointer;
 }
-
-
 
 .visitor-counter i {
     font-size: 20px;
