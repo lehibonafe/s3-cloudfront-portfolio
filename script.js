@@ -66,17 +66,19 @@ if (slides.length && dotsWrap) {
   const COUNT_URL = "https://4jtfdk57utklnkgd3aj6dg4dgi0pchyg.lambda-url.ap-southeast-1.on.aws/";
   const el = document.getElementById("visitor-count");
 
-  if (localStorage.getItem("counted")) {
-    // Returning visitor — don't increment, just show last known total
-    el.textContent = localStorage.getItem("lastCount") || "—";
-  } else {
-    // New visitor — increment once, then remember it
-    fetch(COUNT_URL)
-      .then(r => r.json())
-      .then(d => {
-        el.textContent = d.count;
-        localStorage.setItem("counted", "1");
-        localStorage.setItem("lastCount", d.count);
-      })
-      .catch(() => { el.textContent = "—"; });
+  if (el) {
+    if (localStorage.getItem("counted")) {
+      // Returning visitor — don't increment, just show last known total
+      el.textContent = localStorage.getItem("lastCount") || "—";
+    } else {
+      // New visitor — increment once, then remember it
+      fetch(COUNT_URL)
+        .then(r => r.json())
+        .then(d => {
+          el.textContent = d.count;
+          localStorage.setItem("counted", "1");
+          localStorage.setItem("lastCount", d.count);
+        })
+        .catch(() => { el.textContent = "—"; });
+    }
   }
