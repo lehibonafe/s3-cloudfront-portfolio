@@ -947,12 +947,12 @@ h1.name em {
     gap: 10px;
 }
 .projects-index-grid .project-card {
-    display: grid;
-    grid-template-columns: 40px minmax(0, 1fr) minmax(0, 1.4fr) minmax(0, 1fr);
+    display: flex;
     width: 100%;
     min-width: 0;
-    align-items: center;
-    column-gap: 18px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
     min-height: 0;
 }
 .projects-index-grid .project-card > * {
@@ -976,9 +976,9 @@ h1.name em {
     overflow-wrap: anywhere;
 }
 .projects-index-grid .project-tags {
-    justify-content: flex-end;
-    align-self: center;
-    margin: 0;
+    justify-content: flex-start;
+    align-self: stretch;
+    margin: 4px 0 0;
     padding: 0;
 }
 .projects-index-grid .project-tags span {
@@ -1301,7 +1301,7 @@ footer {
     margin-bottom: 28px;
 }
 .doc-main .project-tags {
-    margin-bottom: 32px;
+    margin-bottom: 15px;
     padding-top: 0;
     border-top: none;
 }
@@ -1411,14 +1411,6 @@ footer {
     .artifacts-row {
         grid-template-columns: 1fr;
         gap: 36px;
-    }
-    .projects-index-grid .project-card {
-        grid-template-columns: 1fr;
-        align-items: start;
-        gap: 8px;
-    }
-    .projects-index-grid .project-tags {
-        justify-content: flex-start;
     }
 }
 @media (max-width: 640px) {
