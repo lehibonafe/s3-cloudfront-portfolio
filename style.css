@@ -873,7 +873,7 @@ h1.name em {
 .project-card {
     display: block;
     padding: 16px 18px;
-    background: var(--bg);
+    background: #ffffff;
     border: 1px solid transparent;
     border-radius: var(--radius-md);
     transition:
