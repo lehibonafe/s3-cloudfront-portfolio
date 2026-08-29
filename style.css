@@ -873,7 +873,7 @@ h1.name em {
 .project-card {
     display: block;
     padding: 16px 18px;
-    background: #ffffff;
+    background: var(--bg);
     border: 1px solid transparent;
     border-radius: var(--radius-md);
     transition:
@@ -945,6 +945,9 @@ h1.name em {
     min-width: 0;
     flex-direction: column;
     gap: 10px;
+}
+[data-theme="light"] .projects-index-grid .project-card {
+    background: #ffffff;
 }
 .projects-index-grid .project-card {
     display: grid;
